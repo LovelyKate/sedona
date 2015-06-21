@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Седона "Гостиницы"</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+	<!--Header-->
+  <header class="main-header">
+    <div class="container">
+      <nav class="main-navigation">
+        <ul>
+          <li>
+            <a href="#">
+              Информация
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Фото и видео
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="logo">
+              <img src="img/logo.png" height="70" width="138" alt="Главная страница">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Карта штата
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Гостиницы
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+	</header>
+
+<!--Filters-->
+  <form class="filters" action="/echo" method="post">
+
+    <fieldset>
+      <legend>Инфраструктура</legend>
+        <label for="check-1">
+          Бассейн
+          <input name="check-1" id="check-1" type="checkbox" value="Pool" checked>
+        </label>
+        <label for="check-2">
+          Парковка
+          <input name="check-2" id="check-2" type="checkbox" value="Parking"d>
+        </label>
+        <label for="check-3">
+          Wi-Fi
+          <input name="check-3" id="check-3" type="checkbox" value="Wi-Fi">
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Тип жилья</legend>
+          <label for="check-4">
+            Гостиница
+            <input name="check-4" id="check-4" type="checkbox" value="Hotel" checked>
+          </label>
+          <label for="check-5">
+            Мотель
+            <input name="check-5" id="check-5" type="checkbox" value="Motel" checked>
+          </label>
+          <label for="check-6">
+            Апартаменты
+            <input name="check-6" id="check-6" type="checkbox" value="Apartments" checked>
+          </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Стоимость в сутки (р):</legend>
+        <!--Ползунок-->
+        <!--Button to apply filter-->
+        <input type="submit" value="Показать">
+      </fieldset>
+
+  </form>
+
+<!--Main-container-->
+ <div class="main-container">
+
+ <!--Ranking-->
+  <div class="ranking">
+    <h2>Найдено: 3</h2>
+    <span class="rank">Сортировка:</span>
+    <a class="button-rank rank active" href="#">По цене
+    </a>
+    <a class="button-rank rank" href="#">По типу
+    </a>
+    <a class="button-rank rank" href="#">По рейтингу
+    </a>
+    <a class="button-rank rank icon-up-dir" href="#" title="По возрастанию">
+      <!--icon-up-dir-->
+    </a>
+    <a class="button-rank rank icon-down-dir" href="#" title="По убыванию">
+      <!--icon-down-dir-->
+    </a>
+  </div>
+
+  <!--Hotels-->
+  <div class="hotels">
+
+    <div class="row">
+      <div class="col-img">
+        <img src="img/hotel-1.png" height="90" width="135" alt="hotel-1">
+      </div>
+      <div class="col-name">
+        <h2>Amara Resort &amp; Spa</h2>
+        <div class="col-left">
+          <span class="info">
+            Гостиница
+          </span>
+          <a class="button button-blue" href="#">
+            Подробнее
+          </a>
+        </div>
+        <div class="col-right">
+          <span class="info">
+            от 3500р.
+          </span>
+          <a class="button button-brown" href="#">
+            Забронировать
+          </a>
+        </div>
+      </div>
+      <div class="col-rating">
+        <div class="stars">
+          <!--icon-star-->
+        </div>
+        <span class="rating">Рейтинг: 8,5</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-img">
+        <img src="img/hotel-2.png" height="90" width="135" alt="hotel-2">
+      </div>
+      <div class="col-name">
+        <h2>Desert Quail Inn</h2>
+        <div class="col-left">
+          <span class="info">
+            Мотель
+          </span>
+          <a class="button button-blue" href="#">
+            Подробнее
+          </a>
+        </div>
+        <div class="col-right">
+          <span class="info">
+            от 2000р.
+          </span>
+          <a class="button button-brown" href="#">
+            Забронировать
+          </a>
+        </div>
+      </div>
+      <div class="col-rating">
+        <div class="stars">
+          <!--icon-star-->
+        </div>
+        <span class="rating">Рейтинг: 8,9</span>
+      </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-img">
+        <img src="img/hotel-3.png" height="90" width="135" alt="hotel-3">
+      </div>
+      <div class="col-name">
+        <h2>Villas at poco Diablo</h2>
+        <div class="col-left">
+          <span class="info">
+            Апартаенты
+          </span>
+          <a class="button button-blue" href="#">
+            Подробнее
+          </a>
+        </div>
+        <div class="col-right">
+          <span class="info">
+            от 4000р.
+          </span>
+          <a class="button button-brown" href="#">
+            Забронировать
+          </a>
+        </div>
+      </div>
+      <div class="col-rating">
+        <div class="stars">
+          <!--icon-star-->
+        </div>
+        <span class="rating">Рейтинг: 9,2</span>
+      </div>
+      </div>
+    </div>
+  </div>
+
+ </div>
+
+<!--Footer-->
+<footer class="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-one-third">
+          <a class="hashtag" href="#" title="Visit Sedona">
+            #visitsedona
+          </a>
+        </div>
+        <div class="col-one-third">
+          <a class="social-button social-button-tw" href="#" title="Twitter">
+            Twitter
+          </a>
+          <a class="social-button social-button-fb" href="#" title="Facebook">
+            Facebook
+          </a>
+          <a class="social-button social-button-ut" href="#" title="Youtube">
+            Youtube
+          </a>
+        </div>
+        <div class="col-one-third">
+          <a class="copyright" href="#">
+            <img src="img/footer-htmlacademy.png" height="39" width="113" alt="htmlacademy">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
