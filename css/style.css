@@ -6,6 +6,10 @@ header -------------------------- toc3
 intro --------------------------- toc4
 column -------------------------- toc5
 features ------------------------ toc6
+form-title ---------------------- toc7
+form ---------------------------- toc8
+map ----------------------------- toc9
+footer ------------------------- toc10
 ======================================
 */
 
@@ -103,8 +107,6 @@ body {
     background-color: #f2f2f2;
 
     font-family: "PT Sans", sans-serif;
-    font-size: 14px;
-    line-height: 1.857;
     color: #000000;
     text-transform: uppercase;
 }
@@ -113,19 +115,21 @@ h1 {
     margin: 0;
     padding: 0;
     font-size: 30px;
-    line-height: 1.857;
+    line-height: 26px;
 }
 
 h2 {
     margin: 0;
     padding: 0;
     font-size: 21px;
-    line-height: 1.857;
+    line-height: 26px;
 }
 
 p {
     margin: 0;
     padding: 0;
+    font-size: 14px;
+    line-height: 21px;
 }
 
 ul {
@@ -178,15 +182,21 @@ HEADER -------------------------- toc3
     display: block;
 
     margin: 0;
-    padding: 0;
+
     font-size: 14px;
-    line-height: 1.857;
+    line-height: 26px;
     text-decoration: none;
     color: #000000;
     font-weight: bold;
 }
 
-.logo img{
+.main-navigation a:not(.logo) {
+    padding-top: 15px;
+    padding-left: 30%;
+    padding-bottom: 17px;
+}
+
+.logo img {
     display: block;
     margin: 0 auto;
 }
@@ -199,22 +209,36 @@ INTRO --------------------------- toc4
 
 ======================================
 */
+.intro {
+    background-color: #d7e8f2;
+    background-image: url("../img/bcg.jpg");
+    background-size: 100%;
+}
+
 .tagline img {
-    display: inline-block;
+    height: 352px;
+    width: 458px;
     margin: 0 auto;
-    text-align: center;
+    margin-bottom: 135px;
+}
+
+.subtitle {
+    background-color: #ffffff;
 }
 
 .subtitle h2 {
     text-align: center;
     font-size: 21px;
-    line-height: 1.857;
+    line-height: 26px;
+    padding-top: 56px;
+    padding-bottom: 28px;
 }
 
 .subtitle p {
     text-align: center;
     font-size: 14px;
-    line-height: 1.857;
+    line-height: 26px;
+    padding-bottom: 50px;
 }
 
 
@@ -232,11 +256,12 @@ COLUMN -------------------------- toc5
 }
 
 .col-one-third {
-    width: 33%;
+    width: 33.3%;
+    text-align: center;
 }
 
 .col-two-thirds {
-    width: 66%;
+    width: 66.7%;
 }
 
 
@@ -247,21 +272,188 @@ FEATURES ------------------------ toc6
 
 ======================================
 */
+.col-two-thirds.photo {
+    padding: 0;
+    margin: 0;
+    min-height: 256px;
+}
+
+/*
+    =============================
+    FEATURES BLUE ---------------
+    =============================
+*/
 .features.features-blue {
+    min-height: 256px;
     background-color: #81b3d2;
 
     padding-top: 50px;
     padding-bottom: 55px;
-    padding-left: 19%;
-    padding-right: 19%;
-}
-
-.features-blue span {
-    display: inline-block;
+    padding-left: 17%;
+    padding-right: 17%;
 }
 
 .features-blue h2,
 .features-blue span,
 .features-blue p {
+    color: #ffffff;
+}
+
+.features-blue h2 {
+    padding-bottom: 10px;
+}
+
+.features-blue span {
+    padding-bottom: 23px;
+}
+
+
+/*
+    =============================
+    FEATURES WHITE --------------
+    =============================
+*/
+.features.features-white {
+    min-height: 330px;
+    background-color: #ffffff;
+
+    padding-top: 60px;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+.features-white h2 {
+    padding-top: 30px;
+    padding-bottom: 22px;
+  }
+
+  /*
+    =============================
+    FEATURES GREY ---------------
+    =============================
+*/
+.features.features-grey {
+    min-height: 256px;
+    background-color: #eeeeee;
+
+    padding-top: 48px;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+.features-grey h2 {
+    padding-bottom: 22px;
+  }
+
+.features-grey span {
+    padding-bottom: 23px;
+}
+
+
+/*
+======================================
+
+FORM-TITLE ---------------------- toc7
+
+======================================
+*/
+.form-title {
+    min-height: 291px;
     text-align: center;
+}
+
+.form-title h1 {
+    padding-top: 57px;
+    padding-bottom: 32px;
+}
+
+.form-title p {
+    padding-bottom: 43px;
+}
+
+.form-title .button {
+    display: inline-block;
+    background-color: #766357;
+
+    text-decoration: none;
+    color:  #ffffff;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 145px;
+    padding-right: 145px;
+}
+
+
+/*
+======================================
+
+FORM ---------------------------- toc9
+
+======================================
+*/
+form {
+    display: none;
+}
+/*
+======================================
+
+MAP ----------------------------- toc9
+
+======================================
+*/
+.map {
+    width: 100%;
+    min-height: 470px;
+    background-image: url("../img/map.jpg");
+    background-position: -250px -135px;
+}
+
+
+/*
+======================================
+
+FOOTER -------------------------- toc9
+
+======================================
+*/
+.page-footer {
+    min-height: 120px;
+}
+
+.page-footer .hashtag {
+    display:inline-block;
+    padding-top: 48px;
+
+    font-weight: bold;
+    text-decoration: none;
+    color:  #000000;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.page-footer .social-button {
+    display:inline-block;
+
+    margin: 0;
+    margin-right: 6px;
+    margin-top: 36px;
+    width: 48px;
+    height: 48px;
+    background-color: #81b3d2;
+
+    padding-top: 13px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 20px;
+}
+
+.page-footer .copyright {
+    display:inline-block;
+    margin-top: 40px;
 }
