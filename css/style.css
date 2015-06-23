@@ -10,6 +10,9 @@ form-title ---------------------- toc7
 form ---------------------------- toc8
 map ----------------------------- toc9
 footer ------------------------- toc10
+filters ------------------------ toc11
+ranking ------------------------ toc12
+hotels ------------------------- toc13
 ======================================
 */
 
@@ -116,6 +119,7 @@ h1 {
     padding: 0;
     font-size: 30px;
     line-height: 26px;
+    font-weight: bold;
 }
 
 h2 {
@@ -123,6 +127,7 @@ h2 {
     padding: 0;
     font-size: 21px;
     line-height: 26px;
+    font-weight: bold;
 }
 
 p {
@@ -163,6 +168,13 @@ li {
     display: table;
     clear: both;
 }
+
+.button {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
 /*
 ======================================
 
@@ -199,6 +211,14 @@ HEADER -------------------------- toc3
 .logo img {
     display: block;
     margin: 0 auto;
+}
+
+.main-navigation a:not(.logo):hover {
+    color: #81b3d2;
+}
+
+.main-navigation a:not(.logo):active {
+    color: #766357;
 }
 
 
@@ -375,7 +395,6 @@ FORM-TITLE ---------------------- toc7
     display: inline-block;
     background-color: #766357;
 
-    text-decoration: none;
     color:  #ffffff;
     font-size: 21px;
     line-height: 26px;
@@ -395,7 +414,7 @@ FORM ---------------------------- toc9
 
 ======================================
 */
-form {
+form .search{
     display: none;
 }
 /*
@@ -416,7 +435,7 @@ MAP ----------------------------- toc9
 /*
 ======================================
 
-FOOTER -------------------------- toc9
+FOOTER ------------------------- toc10
 
 ======================================
 */
@@ -456,4 +475,192 @@ FOOTER -------------------------- toc9
 .page-footer .copyright {
     display:inline-block;
     margin-top: 40px;
+}
+
+
+/*
+======================================
+
+FILTERS ------------------------ toc11
+
+======================================
+*/
+.filters {
+    min-height: 217px;
+
+    background-color: #d7e8f2;
+    background-image: url("../img/bcg-filters.jpg");
+    background-size: 100%;
+    background-position: 0 50%;
+}
+
+.filters fieldset{
+    border:0;
+    display: block;
+    float: left;
+    width: 30%;
+
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+
+    padding-left: 72px;
+}
+
+.filters legend{
+    padding-top:30px;
+}
+
+.filters fieldset:last-child{
+    float: right;
+    min-width: 224px;
+}
+
+
+/*
+======================================
+
+RANKING ------------------------ toc12
+
+======================================
+*/
+.ranking {
+    min-height: 86px;
+    font-size: 12px;
+    line-height: 18px;
+
+    padding-left: 4%;
+    padding-right: 4%;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.ranking h2 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    vertical-align: top;
+
+    margin-right: 52px;
+}
+
+.ranking span,
+.ranking a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-top: 37px;
+    vertical-align: top;
+}
+
+.ranking .rank {
+    margin-right: 42px;
+}
+
+.ranking .button-rank {
+    margin-right: 32px;
+}
+
+.button-rank i {
+    margin-right: 0;
+}
+
+
+/*
+======================================
+
+HOTELS ------------------------- toc13
+
+======================================
+*/
+.hotel-card {
+    position:relative;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.hotels .hotel-card {
+    min-height:150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.hotel-card .hotel-photo {
+    min-width: 135px;
+    position: absolute;
+}
+
+.hotel-card .hotel-main {
+    min-width: 315px;
+    padding-left: 175px;
+}
+
+.hotel-card .rating {
+    min-width: 150px;
+    position: absolute;
+    right: 0;
+}
+
+.hotel-card .hotel-photo,
+.hotel-card .hotel-main {
+    float: left;
+}
+
+.hotel-card .rating {
+    float: right;
+}
+
+.hotel-main h2 {
+    padding-bottom: 12px;
+}
+
+  /*НЕ РАБОТАЕТ :( */
+.hotel-category span {
+    padding-bottom: 17px;
+}
+
+.info .type {
+    display: inline-block;
+    min-width: 110px;
+}
+
+.hotel-buttons .button {
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    color: #ffffff;
+}
+
+.button.button-blue {
+    background-color: #81b3d2;
+    margin-right: 6px;
+}
+
+.button.button-brown {
+    background-color: #766357;
+}
+
+  /*НЕ РАБОТАЕТ :( */
+.stars i {
+    text-align:left;
+    color: #81b3d2;
+    font-size: 19px;
+    line-height: 20px;
+
+    margin-bottom: 48px;
+}
+
+.rating .score {
+    background-color: #f2f2f2;
+    color: #666666;
+
+    padding-left: 16px;
+    padding-right: 13px;
+    padding-top: 8px;
+    padding-bottom: 9px;
 }
