@@ -1,27 +1,27 @@
 /*
-======================================
-fonts --------------------------- toc1
-main style ---------------------- toc2
-header -------------------------- toc3
-intro --------------------------- toc4
-column -------------------------- toc5
-features ------------------------ toc6
-form-title ---------------------- toc7
-form ---------------------------- toc8
-map ----------------------------- toc9
-footer ------------------------- toc10
-filters ------------------------ toc11
-ranking ------------------------ toc12
-hotels ------------------------- toc13
-======================================
+================================================
+fonts ------------------------------------- toc1
+main style -------------------------------- toc2
+header ------------------------------------ toc3
+intro ------------------------------------- toc4
+column ------------------------------------ toc5
+features ---------------------------------- toc6
+form-title -------------------------------- toc7
+form -------------------------------------- toc8
+map --------------------------------------- toc9
+footer ----------------------------------- toc10
+filters ---------------------------------- toc11
+ranking ---------------------------------- toc12
+hotels ----------------------------------- toc13
+================================================
 */
 
 /*
-======================================
+================================================
 
-FONTS --------------------------- toc1
+FONTS ------------------------------------- toc1
 
-======================================
+================================================
 */
 
 @font-face {
@@ -90,11 +90,11 @@ FONTS --------------------------- toc1
 
 
 /*
-======================================
+================================================
 
-MAIN STYLE ---------------------- toc2
+MAIN STYLE -------------------------------- toc2
 
-======================================
+================================================
 */
 html {
     width: 100%;
@@ -134,7 +134,7 @@ p {
     margin: 0;
     padding: 0;
     font-size: 14px;
-    line-height: 21px;
+    line-height: 26px;
 }
 
 ul {
@@ -174,20 +174,27 @@ li {
     font-weight: bold;
 }
 
+.page-wrapper>.container {
+    box-shadow: 0 0 15px rgba(0,1,1,0.2);
+}
+
 
 /*
-======================================
+================================================
 
-HEADER -------------------------- toc3
+HEADER ------------------------------------ toc3
 
-======================================
+================================================
 */
-.main-navigation li {
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
+.main-navigation {
+    position: relative;
+}
 
+.main-navigation li {
+    width: 20%;
+    text-align: center;
     float:left;
+    min-height: 1px;
 }
 
 .main-navigation a {
@@ -202,15 +209,15 @@ HEADER -------------------------- toc3
     font-weight: bold;
 }
 
-.main-navigation a:not(.logo) {
-    padding-top: 15px;
-    padding-left: 30%;
-    padding-bottom: 17px;
+.main-navigation .logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -68.9985px;
 }
 
-.logo img {
-    display: block;
-    margin: 0 auto;
+.main-navigation a:not(.logo) {
+    padding-top: 15px;
+    margin-bottom: 16px;
 }
 
 .main-navigation a:not(.logo):hover {
@@ -223,80 +230,110 @@ HEADER -------------------------- toc3
 
 
 /*
-======================================
+================================================
 
-INTRO --------------------------- toc4
+INTRO ------------------------------------- toc4
 
-======================================
+================================================
 */
 .intro {
     background-color: #d7e8f2;
     background-image: url("../img/bcg.jpg");
-    background-size: 100%;
+    background-size: cover;
+    background-position: center 65%;
+
+    text-align: center;
+
+    padding-top: 76px;
+    margin-bottom: 52px;
 }
 
-.tagline img {
-    height: 352px;
-    width: 458px;
-    margin: 0 auto;
-    margin-bottom: 135px;
+.intro img {
+    margin-bottom: 80px;
 }
 
 .subtitle {
     background-color: #ffffff;
 }
 
-.subtitle h2 {
-    text-align: center;
-    font-size: 21px;
-    line-height: 26px;
-    padding-top: 56px;
-    padding-bottom: 28px;
+/*Подключить белую фигуру.Как?*/
+.subtitle:before {
+    background-image: url("../img/white-shape.svg");
 }
 
-.subtitle p {
-    text-align: center;
-    font-size: 14px;
-    line-height: 26px;
-    padding-bottom: 50px;
+.subtitle h2 {
+    padding-top: 55px;
+    margin-bottom: 27px; /*34px*/
 }
 
 
 /*
-======================================
+================================================
 
-COLUMN -------------------------- toc5
+COLUMN ------------------------------------ toc5
 
-======================================
+================================================
 */
-
 .col-one-third,
 .col-two-thirds {
     float: left;
 }
 
 .col-one-third {
-    width: 33.3%;
+    width: 33.333%;
     text-align: center;
 }
 
 .col-two-thirds {
-    width: 66.7%;
+    width: 66.666%;
 }
 
 
 /*
-======================================
+================================================
 
-FEATURES ------------------------ toc6
+FEATURES ---------------------------------- toc6
 
-======================================
+================================================
 */
-.col-two-thirds.photo {
-    padding: 0;
-    margin: 0;
+
+.features span {
+    display: inline-block;
+}
+
+.features .number,
+.features p {
+    font-style: 14px;
+    line-height: 21px;
+}
+
+/*.features p {
+    padding-bottom: 15px;
+}*/
+
+/*
+    =============================
+    PHOTO -----------------------
+    =============================
+*/
+.col-two-thirds .photo {
     min-height: 256px;
 }
+
+.photo.photo-1 {
+    background-image: url("../img/feat-photo-motel.jpg");
+}
+
+.photo.photo-2 {
+    background-image: url("../img/feat-photo-bridge.jpg");
+}
+
+.photo.photo-1,
+.photo.photo-2 {
+    background-size: cover;
+    background-position: center center;
+}
+
 
 /*
     =============================
@@ -304,27 +341,23 @@ FEATURES ------------------------ toc6
     =============================
 */
 .features.features-blue {
+    color: #ffffff;
+
     min-height: 256px;
+
     background-color: #81b3d2;
 
-    padding-top: 50px;
-    padding-bottom: 55px;
-    padding-left: 17%;
-    padding-right: 17%;
-}
-
-.features-blue h2,
-.features-blue span,
-.features-blue p {
-    color: #ffffff;
+    padding-top: 54px;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .features-blue h2 {
-    padding-bottom: 10px;
+    margin-bottom: 7px;
 }
 
-.features-blue span {
-    padding-bottom: 23px;
+.features-blue .number {
+    margin-bottom: 25px;
 }
 
 
@@ -337,14 +370,17 @@ FEATURES ------------------------ toc6
     min-height: 330px;
     background-color: #ffffff;
 
-    padding-top: 60px;
-    padding-left: 17%;
-    padding-right: 17%;
+    padding-top: 58px;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
+.features-white img {
+    margin-bottom: 24px;
+  }
+
 .features-white h2 {
-    padding-top: 30px;
-    padding-bottom: 22px;
+    margin-bottom: 22px;
   }
 
   /*
@@ -357,38 +393,40 @@ FEATURES ------------------------ toc6
     background-color: #eeeeee;
 
     padding-top: 48px;
-    padding-left: 17%;
-    padding-right: 17%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .features-grey h2 {
-    padding-bottom: 22px;
+    margin-bottom: 11px;
   }
 
 .features-grey span {
-    padding-bottom: 23px;
+    margin-bottom: 23px;
 }
 
 
 /*
-======================================
+================================================
 
-FORM-TITLE ---------------------- toc7
+FORM-TITLE -------------------------------- toc7
 
-======================================
+================================================
 */
 .form-title {
     min-height: 291px;
     text-align: center;
+
+    padding-top: 57px;
 }
 
 .form-title h1 {
-    padding-top: 57px;
-    padding-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 .form-title p {
-    padding-bottom: 43px;
+    line-height: 24px;
+    margin-bottom: 45px;
 }
 
 .form-title .button {
@@ -402,45 +440,92 @@ FORM-TITLE ---------------------- toc7
 
     padding-top: 32px;
     padding-bottom: 32px;
-    padding-left: 145px;
-    padding-right: 145px;
+    padding-left: 137px;
+    padding-right: 137px;
 }
 
 
 /*
-======================================
+================================================
 
-FORM ---------------------------- toc9
+FORM -------------------------------------- toc8
 
-======================================
+================================================
 */
-form .search{
+/*form.search{
     display: none;
+}*/
+.modal-content {
+position: relative;
 }
+
+.search{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -284px;
+
+    width: 568px;
+    height: 395px;
+
+    background-color: #ffffff;
+
+    padding-top: 55px;
+    padding-left: 56px;
+    padding-right: 56px;
+}
+
+.search .button {
+    color:  #ffffff;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 197px;
+    padding-right: 197px;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #81b3d2;
+}
+
 /*
-======================================
+================================================
 
-MAP ----------------------------- toc9
+MAP --------------------------------------- toc9
 
-======================================
+================================================
 */
+
 .map {
+/*    position: absolute;*/
+
     width: 100%;
-    min-height: 470px;
+    min-height: 593px;
     background-image: url("../img/map.jpg");
-    background-position: -250px -135px;
+    background-position: center 55%;
+
+    overflow: hidden;
 }
 
 
 /*
-======================================
+================================================
 
-FOOTER ------------------------- toc10
+FOOTER ----------------------------------- toc10
 
-======================================
+================================================
 */
-.page-footer {
+.page-footer .row {
+/*    position:relative;
+    top: 473px;*/
     min-height: 120px;
+
+    background-color: rgba(249,251,246,0.9);
 }
 
 .page-footer .hashtag {
@@ -455,35 +540,46 @@ FOOTER ------------------------- toc10
 }
 
 .page-footer .social-button {
-    display:inline-block;
+    padding-top: 13px;
 
-    margin: 0;
-    margin-right: 6px;
-    margin-top: 36px;
-    width: 48px;
+    display:inline-block;
+    width: 46px;
     height: 48px;
+
+    margin-right: 2px;
+    margin-top: 36px;
+
     background-color: #81b3d2;
 
-    padding-top: 13px;
-    text-align: center;
     text-decoration: none;
     color: #ffffff;
     font-size: 19px;
     line-height: 20px;
 }
 
+.page-footer .copyright-by,
+.page-footer .copyright {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.page-footer .copyright-by {
+    padding-top: 51px;
+    margin-right: 8px;
+}
+
 .page-footer .copyright {
     display:inline-block;
-    margin-top: 40px;
+    padding-top: 40px;
 }
 
 
 /*
-======================================
+================================================
 
-FILTERS ------------------------ toc11
+FILTERS ---------------------------------- toc11
 
-======================================
+================================================
 */
 .filters {
     min-height: 217px;
@@ -519,11 +615,11 @@ FILTERS ------------------------ toc11
 
 
 /*
-======================================
+================================================
 
-RANKING ------------------------ toc12
+RANKING ---------------------------------- toc12
 
-======================================
+================================================
 */
 .ranking {
     min-height: 86px;
@@ -569,11 +665,11 @@ RANKING ------------------------ toc12
 
 
 /*
-======================================
+================================================
 
-HOTELS ------------------------- toc13
+HOTELS ----------------------------------- toc13
 
-======================================
+================================================
 */
 .hotel-card {
     position:relative;

@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Седона</title>
   <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
-  <link href="css/style.css" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -52,9 +52,7 @@
 
   <!--Intro-->
     <div class="intro">
-      <div class="tagline">
-        <img src="img/tagline.png" height="352" width="458" alt="Tagline">
-      </div>
+      <img src="img/tagline.png" height="352" width="458" alt="Tagline">
       <div class="subtitle">
         <h2>Седона — небольшой городок в Аризоне,
         <br>заслуживающий большего!</h2>
@@ -63,8 +61,6 @@
     </div>
 
     <!--Features-->
-    <div class="main-content">
-
       <div class="row">
         <div class="col-one-third">
           <div class="features features-blue">
@@ -75,8 +71,7 @@
           </div>
         </div>
         <div class="col-two-thirds">
-          <div class="photo">
-            <img src="img/feat-photo-motel.jpg" height="256" width="100%" alt="Motel">
+          <div class="photo photo-1">
           </div>
         </div>
       </div>
@@ -88,7 +83,7 @@
             <img src="img/feat-icon-house.png" height="76" width="75" alt="House">
           </div>
             <h2>Жилье</h2>
-            <p>Рекомендуем пожить в настоящем мотеле, как в кино!</p>
+            <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
         </div>
         <div class="col-one-third">
@@ -113,8 +108,7 @@
 
       <div class="row">
         <div class="col-two-thirds">
-          <div class="photo">
-            <img src="img/feat-photo-bridge.jpg" height="256" width="100%" alt="Bridge">
+          <div class="photo photo-2">
           </div>
         </div>
         <div class="col-one-third">
@@ -156,8 +150,6 @@
         </div>
       </div>
 
-    </div>
-
   <!--Form-title-->
   <div class="form-title">
     <h1>Заинтересовались?</h1>
@@ -170,7 +162,11 @@
     </a>
   </div>
 
-  <!--Form-Убрать лэйбл из инпутов-->
+
+
+
+  <!--Form-->
+<div class="modal-content">
   <form class="search" action="/echo" method="post">
     <label for="arrival">
       Дата заезда:
@@ -194,6 +190,7 @@
 
     <input class="button" type="submit" value="Найти">
   </form>
+</div>
 
 <!--Map-->
   <div class="map">
@@ -223,6 +220,7 @@
           </a>
          </div>
         <div class="col-one-third">
+          <span class="copyright-by">Website by</span>
           <a class="copyright" href="#">
             <img src="img/footer-htmlacademy.png" height="39" width="113" alt="htmlacademy">
           </a>
@@ -230,6 +228,7 @@
       </div>
     </div>
   </footer>
+
 
   </div>
 </div>
