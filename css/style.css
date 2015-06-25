@@ -588,24 +588,35 @@ FILTERS ---------------------------------- toc11
     background-image: url("../img/bcg-filters.jpg");
     background-size: 100%;
     background-position: 0 50%;
+
+    padding-top:29px;
 }
 
 .filters fieldset{
     border:0;
+
     display: block;
     float: left;
-    width: 30%;
 
     color: #ffffff;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 21px;
 
     padding-left: 72px;
 }
 
 .filters legend{
-    padding-top:30px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+
+    padding-bottom: 20px;
+}
+
+.filters label {
+    display: block;
+    padding-bottom: ;
+    font-size: 14px;
+    line-height: 21px;
+    padding-bottom: 26px;
 }
 
 .filters fieldset:last-child{
