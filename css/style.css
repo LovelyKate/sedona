@@ -493,9 +493,9 @@ FORM -------------------------------------- toc8
 
 ================================================
 */
-form.search{
+/*form.search{
     display: none;
-}
+}*/
 
 .modal-content {
 position: relative;
