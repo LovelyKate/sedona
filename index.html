@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Седона</title>
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -53,11 +53,11 @@
   <!--Intro-->
     <div class="intro">
       <img src="img/tagline.png" height="352" width="458" alt="Tagline">
-      <div class="subtitle">
-        <h2>Седона — небольшой городок в Аризоне,
-        <br>заслуживающий большего!</h2>
-        <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
-      </div>
+    </div>
+    <div class="subtitle">
+      <h2>Седона — небольшой городок в Аризоне,
+      <br>заслуживающий большего!</h2>
+      <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
     </div>
 
     <!--Features-->
@@ -165,32 +165,61 @@
   </div>
 
 
-
-
   <!--Form-->
 <div class="modal-content">
   <form class="search" action="/echo" method="post">
-    <label for="arrival">
-      Дата заезда:
-    </label>
-    <input name="arrival" id="arrival" type="date" value="24 апреля 2014">
 
-    <label for="departure">
-      Дата выезда:
-    </label>
-    <input name="departure" id="departure" type="date" value="4 июля 2014">
+  <!--Дата заезда-->
+    <div class="form-row">
+      <div class="form-slot">
+        <label for="arrival">
+          Дата заезда:
+        </label>
+      </div>
+      <div class="form-slot date-choose">
+        <input name="arrival" id="arrival" type="text" value="24 апреля 2014">
+        <a class="icon-calendar"></a>
+      </div>
+    </div>
 
-    <label for="adults">
-      Взрослые:
-    </label>
-      <input name="adults" id="adults" type="number" value="2" min="1" max="10" step="1">
+  <!--Дата выезда-->
+    <div class="form-row">
+      <div class="form-slot">
+        <label for="departure">
+          Дата выезда:
+        </label>
+      </div>
+      <div class="form-slot date-choose">
+        <input name="departure" id="departure" type="text" value="4 июля 2014">
+        <a class="icon-calendar"></a>
+      </div>
+    </div>
 
-    <label for="children">
-      Дети:
-    </label>
-      <input name="children" id="children" type="number" value="0" min="0" max="5" step="1">
+  <!--Количетсво человек-->
+    <div class="form-row">
+      <div class="form-slot">
+        <label for="adults">
+          Взрослые:
+        </label>
+      </div>
+      <div class="form-slot number-choose">
+        <a class="icon-minus"></a>
+        <input name="adults" id="adults" type="text" value="2">
+        <a class="icon-plus"></a>
+      </div>
+      <div class="form-slot">
+        <label class="label-left" for="children">
+          Дети:
+        </label>
+      </div>
+      <div class="form-slot number-choose">
+        <a class="icon-minus"></a>
+        <input name="children" id="children" type="text" value="0">
+        <a class="icon-plus"></a>
+      </div>
+    </div>
 
-    <input class="button" type="submit" value="Найти">
+    <button class="button" type="submit">Найти</button>
   </form>
 </div>
 

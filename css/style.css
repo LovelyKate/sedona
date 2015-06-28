@@ -54,7 +54,7 @@ FONTS ------------------------------------- toc1
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
+/*  margin-right: .2em;*/
   text-align: center;
   /* opacity: .8; */
 
@@ -67,7 +67,7 @@ FONTS ------------------------------------- toc1
 
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  margin-left: .2em;
+/*  margin-left: .2em;*/
 
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
@@ -109,7 +109,7 @@ body {
 
     background-color: #f2f2f2;
 
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     color: #000000;
     text-transform: uppercase;
 }
@@ -158,6 +158,14 @@ li {
 fieldset {
     margin: 0;
     padding: 0;
+}
+
+input,
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
 }
 
 *,
@@ -260,12 +268,11 @@ INTRO ------------------------------------- toc4
     background-color: #d7e8f2;
     background-image: url("../img/bcg.jpg");
     background-size: cover;
-    background-position: center 65%;
+    background-position: center 30%;
 
     text-align: center;
 
     padding-top: 76px;
-    margin-bottom: 52px;
 }
 
 .intro img {
@@ -273,16 +280,31 @@ INTRO ------------------------------------- toc4
 }
 
 .subtitle {
+    position: relative;
+
+    padding-top: 55px;
+
+    text-align: center;
     background-color: #ffffff;
+    margin-bottom: 52px;
 }
 
 /*Подключить белую фигуру.Как?*/
 .subtitle:before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: -57px;
+
+    width:100%;
+    height: 57px;
+
+    background-color: transparent;
     background-image: url("../img/white-shape.svg");
 }
 
 .subtitle h2 {
-    padding-top: 55px;
     margin-bottom: 27px; /*34px*/
 }
 
@@ -472,8 +494,8 @@ FORM-TITLE -------------------------------- toc7
 
     padding-top: 32px;
     padding-bottom: 32px;
-    padding-left: 137px;
-    padding-right: 137px;
+    padding-left: 138px;
+    padding-right: 138px;
 }
 
 .form-title .button:hover {
@@ -498,7 +520,7 @@ FORM -------------------------------------- toc8
 }*/
 
 .modal-content {
-position: relative;
+    position: relative;
 }
 
 .search {
@@ -507,55 +529,156 @@ position: relative;
     left: 50%;
     margin-left: -284px;
 
+    padding: 55px;
+
     width: 568px;
     height: 395px;
 
     background-color: #ffffff;
 
-    padding-top: 55px;
-    padding-left: 56px;
-    padding-right: 56px;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    box-shadow: 0 7px 15px rgba(0,1,1,0.15);
+}
+
+.form-row {
+    min-height: 34px;
+    margin-bottom: 29px;
+    text-align: left;
+}
+
+.form-slot {
+    width: 24%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.form-row input {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.date-choose {
+    position: relative;
+
+    width: 74%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.date-choose input {
+    width: 88.5%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+}
+
+.date-choose a {
+    cursor: pointer;
+    position: absolute;
+
+    display: block;
+    top: 0;
+    right: 0;
+    margin: 0;
+
+    line-height: 38px;
+    width: 11.5%;
+
+    text-align: center;
+    font-size: 21px;
+}
+
+.number-choose {
+    min-height: 34px;
+    position: relative;
+}
+
+.number-choose input {
+    position: absolute;
+    width: 38px;
+    top: 0;
+    right: 33.33%;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: center;
+}
+
+.number-choose a {
+    cursor: pointer;
+    position: absolute;
+
+    display: block;
+    top: 0;
+    margin: 0;
+
+    line-height: 38px;
+    width: 38px;
+    text-align: center;
+}
+
+.number-choose a:first-child {
+    left: 0;
+}
+
+.number-choose a:last-child {
+    right: 0;
+}
+
+.label-left {
+    padding-left: 50px;
 }
 
 /*Инпут с датами - добавить классы*/
-.search input {
+.search input[type="text"] {
     background-color: #f2f2f2;
     border: 2px solid #f2f2f2;
 }
 
-.search input:hover {
+.search input[type="text"]:hover {
     background-color: #ebebeb;
     border: 2px solid #ebebeb;
 }
 
-.search input:active {
+.search input[type="text"]:active {
+    outline: none;
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
 }
 
-/*Инпут - иконочный шрифт*/
+/*Иконочные шрифты*/
 .icon-minus,
 .icon-plus {
-  color: #a9a9a9;
+    color: #a9a9a9;
+    background-color: #f2f2f2;
 }
 
 .icon-calendar {
-  color: #c2c2c2;
+    background-color: #f2f2f2;
+    color: #c2c2c2;
 }
 
 .icon-minus:hover,
 .icon-plus:hover,
 .icon-calendar:hover {
-  color: #000000;
+    color: #000000;
+    background-color: #ebebeb;
 }
 
 .icon-minus:active,
 .icon-plus:active,
 .icon-calendar:active {
-  color: #81b3d2;
+    color: #81b3d2;
 }
 
-/*------------------*/
+/*Кнопка "Найти"*/
 .search .button {
     color:  #ffffff;
     font-size: 21px;
@@ -565,8 +688,10 @@ position: relative;
 
     padding-top: 19px;
     padding-bottom: 19px;
-    padding-left: 197px;
-    padding-right: 197px;
+    padding-left: 195px;
+    padding-right: 195px;
+
+    margin-top: 23px;
 
     border: none;
     outline: none;
@@ -736,9 +861,9 @@ FILTERS ---------------------------------- toc11
     background-size: 100%;
     background-position: 0 50%;
 
-    padding-top:29px;
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-top:27px;
+    padding-right: 6.1%;
+    padding-left: 6.1%;
 }
 
 .filters fieldset {
@@ -748,11 +873,12 @@ FILTERS ---------------------------------- toc11
     color: #ffffff;
 }
 
-.filters fieldset:first-child {
-    margin-right: 115px;
+.filters fieldset:not(:last-child) {
+    margin-right: 10.5%;
 }
 
 .filters fieldset:last-child {
+    width: 30%;
     position: absolute;
     right: 5%;
 }
@@ -763,18 +889,24 @@ FILTERS ---------------------------------- toc11
     font-size: 16px;
     line-height: 21px;
 
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
-.filters .icon-check-off,
-.filters .icon-check-on {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 26px;
-    line-height: 20px;
+fieldset:last-child legend{
+    text-align: left;
+    margin-bottom: 10px;
 }
 
-.filters label {
+fieldset:last-child{
+    text-align: center;
+}
+
+.checkbox {
+    position: relative;
+    padding-left: 39px;
+}
+
+.checkbox label {
     display: block;
     cursor: pointer;
 
@@ -784,11 +916,162 @@ FILTERS ---------------------------------- toc11
     padding-bottom: 26px;
 }
 
-/*.filters input[type="checkbox"] {
+.checkbox input[type="checkbox"] {
     display: none;
-}*/
+    z-index: -1;
+
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox label:before {
+    position: absolute;
+
+    content: '\2610';
+
+    font-size:26px;
+    font-family: 'symbols-sedona';
+
+    left: 0;
+    margin: 0;
+}
+
+input[type="checkbox"]:checked + label:before {
+    content: '\2611';
+}
+
+input[type="checkbox"] + label,
+input[type="checkbox"] + label:before {
+    color: #b5b5b5;
+}
+
+input[type="checkbox"] + label:hover,
+input[type="checkbox"] + label:hover:before {
+    color: #ffffff;
+}
+
+input[type="checkbox"]:disabled + label,
+input[type="checkbox"]:disabled + label:before {
+    color: #6a6a6a;
+}
 
 
+/*
+    =============================
+    RANGE FILTER ----------------
+    =============================
+*/
+.cost-controls {
+    position: relative;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.cost-controls input {
+    max-width: 45%;
+    background-color: transparent;
+    font-style: 0;
+}
+
+.cost-controls label {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+
+    padding-left:5%;
+    padding-right: 5%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    text-align: right;
+}
+
+.cost-controls:before{
+    position: absolute;
+    content: '';
+
+    width: 2px;
+    height: 22px;
+
+    top: 5px;
+    left: 50%;
+    margin-left: -1px;
+
+    background-color: #ffffff;
+}
+
+.range-controls {
+    position: relative;
+    height: 2px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    background: rgba(255,255,255,.3);
+}
+
+.scale {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0%;
+    right: 15%;
+
+    height: 2px;
+
+    background-color: #ffffff;
+}
+
+.toggle {
+    position: absolute;
+    top: -8px;
+
+    width:4px;
+    height:4px;
+
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+
+    padding: 2px;
+    background-color: #ababab;
+    cursor: pointer;
+
+    box-shadow: 0 2px 0 0 rgba(0,1,1,0.14);
+}
+
+.toggle:hover {
+    background-color: #1c4f80;
+}
+
+.min-toggle {
+    left: 0%;
+}
+
+.max-toggle {
+    right: 15%;
+}
+
+.range-button {
+    font-family: 'PT Sans',Arial,sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 21px;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    margin-top: 15px;
+
+    background-color: transparent;
+
+    border: 2px solid #ffffff;
+}
 
 /*
 ================================================
@@ -804,8 +1087,10 @@ RANKING ---------------------------------- toc12
     font-size: 12px;
     line-height: 18px;
 
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 6.1%;
+    padding-right: 6.1%;
+    padding-top: 28px;
+    padding-bottom: 30px;
 
     border-bottom: 1px solid #e5e5e5;
 }
@@ -815,35 +1100,82 @@ RANKING ---------------------------------- toc12
 
     margin: 0;
     padding: 0;
-    margin-top: 30px;
     vertical-align: top;
 
-    margin-right: 52px;
+    margin-right: 45px;
 }
 
-.ranking span,
-.ranking a {
+.ranking .rank,
+.ranking .button-rank {
     display: inline-block;
     margin: 0;
     padding: 0;
-    margin-top: 37px;
+    margin-top: 7px;
 
     vertical-align: top;
 }
 
 .ranking .rank {
-    margin-right: 42px;
+    margin-right: 35px;
 }
 
-.ranking .button-rank:not(.arrow) {
+.ranking .button-rank {
     margin-right: 32px;
 }
 
-.arrow {
+.button-rank.active {
+    text-decoration: none;
     color: #81b3d2;
-    font-size: 19px;
+}
+
+.button-rank:not(.active) {
+    border-bottom: 1px dotted #81b3d2;
+    text-decoration: none;
+    color: #cccccc;
+}
+
+.button-rank:not(.active):hover {
+    color: #81b3d2;
+}
+
+.button-rank:not(.active):active {
+    border-bottom: none;
+    color: #000000;
+}
+
+
+/*
+    =============================
+    ARROWS ----------------------
+    =============================
+*/
+.ranking .arrows {
+    position: absolute;
+    top: 30px;
+    right: 6.1%;
+}
+
+.arrows .button-arrow {
+    display: inline-block;
+
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 23px;
     line-height: 20px;
 }
+
+.button-arrow.active {
+    color: #81b3d2;
+}
+
+.button-arrow:hover:not(.active) {
+    color: #000000;
+}
+
+.button-arrow:active:not(.active) {
+    color: #81b3d2;
+}
+
 
 /*
 ================================================
@@ -854,22 +1186,15 @@ HOTELS ----------------------------------- toc13
 */
 .hotels .hotel-card {
     position:relative;
+
     border-bottom: 1px solid #e5e5e5;
-}
-
-.hotels .hotel-card {
-    position: relative;
-
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
 
     min-height:150px;
 
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 6.1%;
+    padding-right: 6.1%;
 }
 
 
@@ -879,8 +1204,13 @@ HOTELS ----------------------------------- toc13
     =============================
 */
 .hotel-card .hotel-photo {
-    position: absolute;
-    min-width: 135px;
+    display: inline-block;
+    vertical-align: top;
+
+    width: 135px;
+    height: 90px;
+
+    margin-right: 28px;
 }
 
 
@@ -890,23 +1220,21 @@ HOTELS ----------------------------------- toc13
     =============================
 */
 .hotel-card .hotel-main {
-    position: absolute;
-
-    margin-left: 175px;
-    margin-right: 175px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .hotel-main h2 {
-    margin-bottom: 8px;
     cursor: pointer;
+    margin-bottom: 2px;
 }
 
 .hotel-main h2:hover {
-  color: #81b3d2;
+    color: #81b3d2;
 }
 
 .hotel-main h2:active {
-  color: #cacaca;
+    color: #cacaca;
 }
 
 .hotel-main .info {
@@ -934,12 +1262,15 @@ HOTELS ----------------------------------- toc13
     padding-bottom: 4px;
 
     color: #ffffff;
+
+    font-size: 14px;
+    line-height: 21px;
 }
 
 /*.button-blue*/
 .button.button-blue {
     background-color: #81b3d2;
-    margin-right: 6px;
+    margin-right: 5px;
 }
 
 .button.button-blue:hover {
@@ -973,30 +1304,30 @@ HOTELS ----------------------------------- toc13
 */
 
 .hotel-card .hotel-rating {
+    display: inline-block;
+    text-align: right;
+
+    top: 30px;
+    right: 0;
     position: absolute;
     min-width: 150px;
-    right: 5%;
+    right: 6.1%;
 }
 
-  /*НЕ РАБОТАЕТ :( */
 .hotel-rating .stars{
-    display: inline-block;
-
-    text-align:left;
     color: #81b3d2;
     font-size: 19px;
     line-height: 20px;
 
-    margin-bottom: 48px;
+    margin-bottom: 42px;
 }
 
 .hotel-rating .score {
-    display: inline-block;
     background-color: #f2f2f2;
     color: #666666;
 
     padding-left: 16px;
-    padding-right: 13px;
+    padding-right: 16px;
     padding-top: 8px;
     padding-bottom: 9px;
 }

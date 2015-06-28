@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Седона "Гостиницы"</title>
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -56,43 +56,76 @@
 
     <fieldset>
       <legend>Инфраструктура:</legend>
-                <input name="check-1" id="check-1" type="checkbox" value="Pool" checked>
+      <div class="checkbox">
+        <input name="check-1" id="check-1" type="checkbox" value="Pool" checked>
         <label for="check-1">
-          <i class="icon-check-off"></i>
-          <i class="icon-check-on"></i>
           Бассейн
         </label>
+      </div>
+      <div class="checkbox">
+          <input name="check-2" id="check-2" type="checkbox" value="Parking"d>
         <label for="check-2">
           Парковка
-          <input name="check-2" id="check-2" type="checkbox" value="Parking"d>
         </label>
+      </div>
+      <div class="checkbox">
+          <input name="check-3" id="check-3" type="checkbox" value="Wi-Fi">
         <label for="check-3">
           Wi-Fi
-          <input name="check-3" id="check-3" type="checkbox" value="Wi-Fi">
         </label>
-      </fieldset>
+      </div>
+    </fieldset>
 
-      <fieldset>
-        <legend>Тип жилья:</legend>
-          <label for="check-4">
-            Гостиница
-            <input name="check-4" id="check-4" type="checkbox" value="Hotel" checked>
-          </label>
-          <label for="check-5">
-            Мотель
-            <input name="check-5" id="check-5" type="checkbox" value="Motel" checked>
-          </label>
-          <label for="check-6">
-            Апартаменты
-            <input name="check-6" id="check-6" type="checkbox" value="Apartments" checked>
-          </label>
-      </fieldset>
+    <fieldset>
+      <legend>Тип жилья:</legend>
+      <div class="checkbox">
+          <input name="check-4" id="check-4" type="checkbox" value="Hotel" checked>
+        <label for="check-4">
+          Гостиница
+        </label>
+      </div>
+      <div class="checkbox">
+          <input name="check-5" id="check-5" type="checkbox" value="Motel" checked>
+        <label for="check-5">
+          Мотель
+        </label>
+      </div>
+      <div class="checkbox">
+          <input name="check-6" id="check-6" type="checkbox" value="Apartments" checked>
+        <label for="check-6">
+          Апартаменты
+        </label>
+      </div>
+    </fieldset>
 
       <fieldset>
         <legend>Стоимость в сутки (р):</legend>
-        <!--Ползунок-->
+        <div class="range-filter">
+          <div class="cost-controls">
+            <label>
+              от
+              <input class="min-cost" type="text" value="0">
+            </label>
+            <label>
+              до
+              <input class="max-cost" type="text" value="3000">
+            </label>
+          </div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar">
+              </div>
+            </div>
+            <div class="toggle min-toggle">
+            </div>
+            <div class="toggle max-toggle">
+            </div>
+          </div>
+        </div>
         <!--Button to apply filter-->
-        <input type="submit" value="Показать">
+        <button class="range-button" type="submit">
+          Показать
+        </button>
       </fieldset>
 
   </form>
@@ -113,12 +146,14 @@
     <a class="button-rank" href="#">
       По рейтингу
     </a>
-    <a class="button-rank arrow" href="#" title="По возрастанию">
-      <i class="icon-up-dir"></i>
-    </a>
-    <a class="button-rank arrow" href="#" title="По убыванию">
-      <i class="icon-down-dir"></i>
-    </a>
+    <div class="arrows">
+      <a class="button-arrow" href="#" title="По возрастанию" alt="По возрастанию">
+        <i class="icon-up-dir"></i>
+      </a>
+      <a class="button-arrow active" href="#" title="По убыванию" alt="По убыванию">
+        <i class="icon-down-dir"></i>
+      </a>
+    </div>
   </div>
 
   <!--Hotels-->
@@ -198,7 +233,7 @@
         <h2>Villas at poco Diablo</h2>
         <div class="hotel-category">
           <span class="info type">
-            Апартаенты
+            Апартаменты
           </span>
           <span class="info price">
             от 4000р.
