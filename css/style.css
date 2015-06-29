@@ -13,6 +13,7 @@ footer ----------------------------------- toc10
 filters ---------------------------------- toc11
 ranking ---------------------------------- toc12
 hotels ----------------------------------- toc13
+search hotels page ----------------------- toc14
 ================================================
 */
 
@@ -231,7 +232,7 @@ HEADER ------------------------------------ toc3
 }
 
 .main-navigation a:not(.logo) {
-    padding-top: 15px;
+    padding-top: 14px;
     margin-bottom: 16px;
 }
 
@@ -265,10 +266,12 @@ INTRO ------------------------------------- toc4
 ================================================
 */
 .intro {
+    position: relative;
+
     background-color: #d7e8f2;
     background-image: url("../img/bcg.jpg");
     background-size: cover;
-    background-position: center 30%;
+    background-position: center 21%;
 
     text-align: center;
 
@@ -276,36 +279,35 @@ INTRO ------------------------------------- toc4
 }
 
 .intro img {
-    margin-bottom: 80px;
+    margin-bottom: 77px;
+    margin-left: 2px;
 }
 
-.subtitle {
-    position: relative;
-
-    padding-top: 55px;
-
-    text-align: center;
-    background-color: #ffffff;
-    margin-bottom: 52px;
-}
-
-/*Подключить белую фигуру.Как?*/
-.subtitle:before {
+/*Белая маска*/
+.intro:after {
     content: '';
 
     position: absolute;
     left: 0;
-    top: -57px;
+    right: 0;
+    bottom: 0;
 
-    width:100%;
     height: 57px;
 
     background-color: transparent;
     background-image: url("../img/white-shape.svg");
 }
 
+.subtitle {
+    padding-top: 59px;
+
+    text-align: center;
+    background-color: #ffffff;
+    margin-bottom: 49px;
+}
+
 .subtitle h2 {
-    margin-bottom: 27px; /*34px*/
+    margin-bottom: 28px; /*34px*/
 }
 
 
@@ -390,12 +392,12 @@ FEATURES ---------------------------------- toc6
     padding-right: 15%;
 }
 
-.features-blue h2 {
-    margin-bottom: 7px;
+.features-blue .features-title {
+    margin-bottom: 9px;
 }
 
 .features-blue .number {
-    margin-bottom: 25px;
+    margin-bottom: 21px;
 }
 
 
@@ -408,33 +410,45 @@ FEATURES ---------------------------------- toc6
     min-height: 330px;
     background-color: #ffffff;
 
-    padding-top: 58px;
+    padding-top: 56px;
     padding-left: 15%;
     padding-right: 15%;
 }
 
 .features-white .feat-img {
     min-height: 76px;
-    overflow: hidden;
     position: relative;
 
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
-.features-white img {
-    height: 100%;
-    width: auto;
+.features-white .feat-img:before {
+    content: '';
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -50%;
-    top: -50%;
 
-    margin: auto;
+    height: 76px;
+    width: 76px;
+    margin-left: -38px;
+
+    background-color: transparent;
+    background-image: url("../img/sprit-feat-icons.png");
+    background-repeat: no-repeat;
 }
 
-.features-white h2 {
-    margin-bottom: 22px;
+.feat-img.feat-house:before {
+    background-position: 0 0;
+}
+
+.feat-img.feat-burger:before {
+    background-position: -95px 0px;
+}
+
+.feat-img.feat-souvenir:before {
+    background-position: -191px 0;
+}
+
+.features-white .features-title {
+    margin-bottom: 21px;
 }
 
   /*
@@ -446,17 +460,17 @@ FEATURES ---------------------------------- toc6
     min-height: 256px;
     background-color: #eeeeee;
 
-    padding-top: 48px;
+    padding-top: 46px;
     padding-left: 15%;
     padding-right: 15%;
 }
 
-.features-grey h2 {
-    margin-bottom: 11px;
+.features-grey .features-title {
+    margin-bottom: 10px;
   }
 
 .features-grey .number {
-    margin-bottom: 23px;
+    margin-bottom: 22px;
 }
 
 
@@ -468,10 +482,10 @@ FORM-TITLE -------------------------------- toc7
 ================================================
 */
 .form-title {
-    min-height: 291px;
+    min-height: 205px;
     text-align: center;
 
-    padding-top: 57px;
+    padding-top: 56px;
 }
 
 .form-title h1 {
@@ -484,6 +498,7 @@ FORM-TITLE -------------------------------- toc7
 }
 
 .form-title .button {
+    width: 568px;
     display: inline-block;
     background-color: #766357;
 
@@ -492,10 +507,10 @@ FORM-TITLE -------------------------------- toc7
     line-height: 26px;
     font-weight: bold;
 
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 138px;
-    padding-right: 138px;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .form-title .button:hover {
@@ -515,10 +530,6 @@ FORM -------------------------------------- toc8
 
 ================================================
 */
-/*form.search{
-    display: none;
-}*/
-
 .modal-content {
     position: relative;
 }
@@ -572,7 +583,7 @@ FORM -------------------------------------- toc8
     vertical-align: middle;
 }
 
-.date-choose input {
+.date-choose .input-date {
     width: 88.5%;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -600,11 +611,11 @@ FORM -------------------------------------- toc8
     position: relative;
 }
 
-.number-choose input {
+.number-choose .input-number {
     position: absolute;
     width: 38px;
     top: 0;
-    right: 33.33%;
+    right: 33%;
 
     padding-top: 4px;
     padding-bottom: 4px;
@@ -620,7 +631,7 @@ FORM -------------------------------------- toc8
     margin: 0;
 
     line-height: 38px;
-    width: 38px;
+    width: 37px;
     text-align: center;
 }
 
@@ -632,28 +643,31 @@ FORM -------------------------------------- toc8
     right: 0;
 }
 
-.label-left {
-    padding-left: 50px;
+.label-children {
+    padding-left: 52px;
 }
 
-/*Инпут с датами - добавить классы*/
-.search input[type="text"] {
+/*Стилизация - инпуты*/
+.search .input-date,
+.search .input-number {
     background-color: #f2f2f2;
     border: 2px solid #f2f2f2;
 }
 
-.search input[type="text"]:hover {
+.search .input-date:hover,
+.search .input-number:hover {
     background-color: #ebebeb;
     border: 2px solid #ebebeb;
 }
 
-.search input[type="text"]:active {
+.search .input-date:focus,
+.search .input-number:focus {
     outline: none;
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
 }
 
-/*Иконочные шрифты*/
+/*Стилизация - иконочные шрифты*/
 .icon-minus,
 .icon-plus {
     color: #a9a9a9;
@@ -669,7 +683,6 @@ FORM -------------------------------------- toc8
 .icon-plus:hover,
 .icon-calendar:hover {
     color: #000000;
-    background-color: #ebebeb;
 }
 
 .icon-minus:active,
@@ -678,20 +691,22 @@ FORM -------------------------------------- toc8
     color: #81b3d2;
 }
 
-/*Кнопка "Найти"*/
+/*Стилизация - кнопка "Найти"*/
 .search .button {
+    width: 100%;
+
     color:  #ffffff;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     text-transform: uppercase;
 
-    padding-top: 19px;
-    padding-bottom: 19px;
-    padding-left: 195px;
-    padding-right: 195px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 19px;
+    padding-right: 19px;
 
-    margin-top: 23px;
+    margin-top: 28px;
 
     border: none;
     outline: none;
@@ -708,6 +723,11 @@ FORM -------------------------------------- toc8
     color: #94b9d2;
 }
 
+/*Для скрипта и анимации*/
+.hidden {
+    display: none;
+}
+
 
 /*
 ================================================
@@ -718,7 +738,8 @@ MAP --------------------------------------- toc9
 */
 .map {
     width: 100%;
-    min-height: 593px;
+    min-height: 589px;
+    background-color: #f2f1ef;
     background-image: url("../img/map.jpg");
     background-position: center bottom;
 }
@@ -809,7 +830,7 @@ FOOTER ----------------------------------- toc10
     display: inline-block;
     vertical-align: top;
     padding-top: 46px;
-    right: 55px;
+    right: 58px;
 
     font-size: 14px;
     line-height: 26px;
@@ -827,7 +848,7 @@ FOOTER ----------------------------------- toc10
     content: "";
 
     top: 40px;
-    left: -51px;
+    left: -55px;
 
     width: 112px;
     height: 39px;
@@ -862,8 +883,8 @@ FILTERS ---------------------------------- toc11
     background-position: 0 50%;
 
     padding-top:27px;
-    padding-right: 6.1%;
-    padding-left: 6.1%;
+    padding-right: 6%;
+    padding-left: 6%;
 }
 
 .filters fieldset {
@@ -878,9 +899,10 @@ FILTERS ---------------------------------- toc11
 }
 
 .filters fieldset:last-child {
-    width: 30%;
+    width: 26.3%;
     position: absolute;
-    right: 5%;
+    right: 7%;
+    min-width: 224px;
 }
 
 
@@ -889,7 +911,7 @@ FILTERS ---------------------------------- toc11
     font-size: 16px;
     line-height: 21px;
 
-    margin-bottom: 24px;
+    margin-bottom: 25px;
 }
 
 fieldset:last-child legend{
@@ -913,7 +935,7 @@ fieldset:last-child{
     font-size: 14px;
     line-height: 21px;
 
-    padding-bottom: 26px;
+    padding-bottom: 25px;
 }
 
 .checkbox input[type="checkbox"] {
@@ -953,6 +975,7 @@ input[type="checkbox"] + label:hover:before {
 input[type="checkbox"]:disabled + label,
 input[type="checkbox"]:disabled + label:before {
     color: #6a6a6a;
+    cursor: default;
 }
 
 
@@ -969,18 +992,18 @@ input[type="checkbox"]:disabled + label:before {
 }
 
 .cost-controls input {
-    max-width: 45%;
+    max-width: 50%;
     background-color: transparent;
-    font-style: 0;
 }
 
 .cost-controls label {
+    font-size: 14px;
+    line-height: 21px;
+
     display: inline-block;
     vertical-align: top;
     width: 45%;
 
-    padding-left:5%;
-    padding-right: 5%;
     padding-top: 6px;
     padding-bottom: 6px;
 
@@ -1008,7 +1031,7 @@ input[type="checkbox"]:disabled + label:before {
     margin-top: 20px;
     margin-bottom: 20px;
 
-    background: rgba(255,255,255,.3);
+    background: rgba(255,255,255,0.3);
 }
 
 .scale {
@@ -1050,7 +1073,7 @@ input[type="checkbox"]:disabled + label:before {
 }
 
 .max-toggle {
-    right: 15%;
+    right: 14%;
 }
 
 .range-button {
@@ -1061,16 +1084,27 @@ input[type="checkbox"]:disabled + label:before {
     font-size: 14px;
     line-height: 21px;
 
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 35px;
     padding-right: 35px;
 
-    margin-top: 15px;
+    margin-top: 11px;
 
     background-color: transparent;
 
     border: 2px solid #ffffff;
+    border-radius: 3px;
+}
+
+.range-button:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.range-button:active {
+    color: #b5b5b5;
+    background-color: #ffffff;
 }
 
 /*
@@ -1087,9 +1121,9 @@ RANKING ---------------------------------- toc12
     font-size: 12px;
     line-height: 18px;
 
-    padding-left: 6.1%;
-    padding-right: 6.1%;
-    padding-top: 28px;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 30px;
     padding-bottom: 30px;
 
     border-bottom: 1px solid #e5e5e5;
@@ -1105,22 +1139,26 @@ RANKING ---------------------------------- toc12
     margin-right: 45px;
 }
 
-.ranking .rank,
-.ranking .button-rank {
+.sort {
     display: inline-block;
+    margin-top: 6px;
+}
+
+.sort .rank,
+.sort .button-rank {
+    display: inline;
+    vertical-align: top;
+
     margin: 0;
     padding: 0;
-    margin-top: 7px;
-
-    vertical-align: top;
 }
 
-.ranking .rank {
-    margin-right: 35px;
+.sort .rank {
+    margin-right: 36px;
 }
 
-.ranking .button-rank {
-    margin-right: 32px;
+.sort .button-rank {
+    margin-right: 29px;
 }
 
 .button-rank.active {
@@ -1150,13 +1188,14 @@ RANKING ---------------------------------- toc12
     =============================
 */
 .ranking .arrows {
-    position: absolute;
-    top: 30px;
-    right: 6.1%;
+    display: inline-block;
+    float: right;
+    margin-top: 2px;
 }
 
 .arrows .button-arrow {
     display: inline-block;
+    vertical-align: middle;
 
     text-decoration: none;
     color: #cccccc;
@@ -1193,8 +1232,8 @@ HOTELS ----------------------------------- toc13
 
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-left: 6.1%;
-    padding-right: 6.1%;
+    padding-left: 6%;
+    padding-right: 6%;
 }
 
 
@@ -1210,7 +1249,7 @@ HOTELS ----------------------------------- toc13
     width: 135px;
     height: 90px;
 
-    margin-right: 28px;
+    margin-right: 26px;
 }
 
 
@@ -1226,7 +1265,7 @@ HOTELS ----------------------------------- toc13
 
 .hotel-main h2 {
     cursor: pointer;
-    margin-bottom: 2px;
+    margin-top: -4px;
 }
 
 .hotel-main h2:hover {
@@ -1237,18 +1276,23 @@ HOTELS ----------------------------------- toc13
     color: #cacaca;
 }
 
-.hotel-main .info {
+.hotel-category .info {
+    margin-top: 7px;
+
     display: inline-block;
+    vertical-align: top;
+
+    font-size: 14px;
+    line-height: 21px;
+
+    margin-bottom: 13px;
 }
 
 .info.type {
     display: inline-block;
-    min-width: 115px;
+    min-width: 111px;
 }
 
-.hotel-category .info {
-    padding-bottom: 16px;
-}
 
   /*
     =============================
@@ -1256,10 +1300,12 @@ HOTELS ----------------------------------- toc13
     =============================
 */
 .hotel-buttons .button {
+    display: inline-block;
+
     padding-left: 16px;
     padding-right: 16px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 
     color: #ffffff;
 
@@ -1270,7 +1316,7 @@ HOTELS ----------------------------------- toc13
 /*.button-blue*/
 .button.button-blue {
     background-color: #81b3d2;
-    margin-right: 5px;
+    margin-right: 2px;
 }
 
 .button.button-blue:hover {
@@ -1307,27 +1353,75 @@ HOTELS ----------------------------------- toc13
     display: inline-block;
     text-align: right;
 
-    top: 30px;
-    right: 0;
     position: absolute;
+    top: 30px;
+    padding-right: 5px;
+    right: 0;
     min-width: 150px;
     right: 6.1%;
 }
 
-.hotel-rating .stars{
+.hotel-rating .stars {
+    margin-top: -3px;
     color: #81b3d2;
     font-size: 19px;
     line-height: 20px;
 
-    margin-bottom: 42px;
+    margin-bottom: 47px;
 }
 
 .hotel-rating .score {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 21px;
+
     background-color: #f2f2f2;
     color: #666666;
 
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 8px;
-    padding-bottom: 9px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+/*
+================================================
+
+SEARCH HOTELS PAGE ----------------------- toc14
+
+================================================
+*/
+.search-hotels-page {
+    position: relative;
+    min-height: 700px;
+
+    background-color: #f2f1ef;
+    background-image: url("../img/map.jpg");
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.brown-title {
+    color: #ffffff;
+    width: 568px;
+    display: inline-block;
+    background-color: #766357;
+}
+
+.search-hotels-title {
+    padding-top: 20px;
+    text-align: center;
+    background-color: rgba(254,254,254,0.9);
+}
+
+.search-hotels-title h2 {
+    margin-bottom: 22px;
+    margin-top: 22px;
+}
+
+.search-hotels-title p {
+    margin-bottom: 12px;
 }

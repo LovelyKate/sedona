@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Седона</title>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="page-wrapper">
+  <div class="container">
+
+  <!--Header-->
+  <header class="page-header">
+    <div class="container">
+      <nav class="main-navigation">
+        <ul>
+          <li>
+            <a href="#">
+              Информация
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Фото и видео
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="logo">
+              <img src="img/logo.png" height="70" width="138" alt="Главная страница">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Карта штата
+            </a>
+          </li>
+          <li>
+            <a href="hotels.html">
+              Гостиницы
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!--Main-->
+  <main>
+    <div class="search-hotels-page">
+
+  <!--Form-title-->
+  <div class="search-hotels-title">
+      <p>
+        Укажите предполагаемые даты поездки<br>и мы покажем вам лучшие предложения гостиниц в седоне
+      </p>
+    <div class="brown-title">
+      <h2>
+        Поиск гостиницы в Седоне
+      </h2>
+    </div>
+  </div>
+
+  <!--Form-->
+  <div class="modal-content">
+    <form class="search" action="/echo" method="post">
+
+    <!--Дата заезда-->
+      <div class="form-row">
+        <div class="form-slot">
+          <label for="arrival">
+            Дата заезда:
+          </label>
+        </div>
+        <div class="form-slot date-choose">
+          <input class="input-date" name="arrival" id="arrival" type="text" value="24 апреля 2014">
+          <a class="icon-calendar"></a>
+        </div>
+      </div>
+
+    <!--Дата выезда-->
+      <div class="form-row">
+        <div class="form-slot">
+          <label for="departure">
+            Дата выезда:
+          </label>
+        </div>
+        <div class="form-slot date-choose">
+          <input class="input-date" name="departure" id="departure" type="text" value="4 июля 2014">
+          <a class="icon-calendar"></a>
+        </div>
+      </div>
+
+    <!--Количетсво человек-->
+      <div class="form-row">
+        <div class="form-slot">
+          <label class="label-adults" for="adults">
+            Взрослые:
+          </label>
+        </div>
+        <div class="form-slot number-choose">
+          <a class="icon-minus"></a>
+          <input class="input-number" name="adults" id="adults" type="text" value="2">
+          <a class="icon-plus"></a>
+        </div>
+        <div class="form-slot">
+          <label class="label-children" for="children">
+            Дети:
+          </label>
+        </div>
+        <div class="form-slot number-choose">
+          <a class="icon-minus"></a>
+          <input class="input-number" name="children" id="children" type="text" value="0">
+          <a class="icon-plus"></a>
+        </div>
+      </div>
+
+      <button class="button" type="submit">Найти</button>
+    </form>
+  </div>
+
+</div>
+</main>
+
+<!--Footer-->
+  <footer class="page-footer main-page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-one-third">
+          <a class="hashtag" href="#" title="Visit Sedona">
+            #visitsedona
+          </a>
+        </div>
+        <div class="col-one-third">
+          <a class="social-button social-button-tw" href="#" title="Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <a class="social-button social-button-fb" href="#" title="Facebook">
+            <i class="icon-facebook"></i>
+          </a>
+         <a class="social-button social-button-ut" href="#" title="Youtube">
+            <i class="icon-youtube"></i>
+          </a>
+         </div>
+        <div class="col-one-third">
+          <span class="copyright-by">Website by</span>
+          <a class="copyright" href="#" alt="HTML Acdemy">
+          </a>
+         </div>
+      </div>
+    </div>
+  </footer>
+
+
+  </div>
+</div>
+
+  </body>
+</html>

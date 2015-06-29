@@ -55,8 +55,7 @@
       <img src="img/tagline.png" height="352" width="458" alt="Tagline">
     </div>
     <div class="subtitle">
-      <h2>Седона — небольшой городок в Аризоне,
-      <br>заслуживающий большего!</h2>
+      <h2>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
       <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
     </div>
 
@@ -64,8 +63,7 @@
       <div class="row">
         <div class="col-one-third">
           <div class="features features-blue">
-            <h2>Настоящий
-            <br>городок</h2>
+            <h2 class="features-title">Настоящий<br>городок</h2>
               <span class="number">— №1 —</span>
               <p>Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
@@ -80,28 +78,25 @@
       <div class="row">
         <div class="col-one-third">
           <div class="features features-white">
-          <div class="feat-img">
-            <img src="img/feat-icon-house.png" height="76" width="75" alt="House">
+          <div class="feat-img feat-house">
           </div>
-            <h2>Жилье</h2>
+            <h2 class="features-title">Жилье</h2>
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
         </div>
         <div class="col-one-third">
           <div class="features features-white">
-            <div class="feat-img">
-              <img src="img/feat-icon-burger.png" height="76" width="74" alt="Burger">
+            <div class="feat-img feat-burger">
             </div>
-            <h2>Еда</h2>
+            <h2 class="features-title">Еда</h2>
             <p>Всегда заказывай фирменный бургер, вы не разочаруетесь!</p>
           </div>
         </div>
         <div class="col-one-third">
           <div class="features features-white">
-            <div class="feat-img">
-              <img src="img/feat-icon-souvenir.png" height="76" width="64" alt="Souvenir">
+            <div class="feat-img feat-souvenir">
             </div>
-            <h2>Сувениры</h2>
+            <h2 class="features-title">Сувениры</h2>
             <p>Не только китайского, но и местного производства!</p>
           </div>
         </div>
@@ -115,10 +110,9 @@
         </div>
         <div class="col-one-third">
           <div class="features features-blue">
-            <h2>Там есть
-            <br>мост дьявола</h2>
+            <h2 class="features-title">Там есть<br>мост дьявола</h2>
             <span class="number">— №2 —</span>
-            <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+            <p>Да, по нему можно пройти!<br>Если конечно вы осмелитесь</p>
           </div>
         </div>
       </div>
@@ -126,26 +120,22 @@
       <div class="row">
         <div class="col-one-third">
         <div class="features features-grey">
-            <h2>Небольшая
-            <br>площадь</h2>
+            <h2 class="features-title">Небольшая<br>площадь</h2>
             <span class="number">— №3 —</span>
-            <p>Все достопримеча-<br>
-            тельности находятся очень близко
+            <p>Все достопримеча-<br>тельности находятся очень близко
             </p>
           </div>
         </div>
         <div class="col-one-third">
           <div class="features features-grey">
-            <h2>Красивая
-            <br>дорога</h2>
+            <h2 class="features-title">Красивая<br>дорога</h2>
             <span class="number">— №4 —</span>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
         </div>
         <div class="col-one-third">
           <div class="features features-grey">
-            <h2>Мало
-            <br>туристов</h2>
+            <h2 class="features-title">Мало<br>туристов</h2>
             <span class="number">— №5 —</span>
             <p>Большинство едет в Гран Каньон и толпится там</p>
           </div>
@@ -156,17 +146,16 @@
   <div class="form-title">
     <h1>Заинтересовались?</h1>
     <p>
-      Укажите предполагаемые даты поездки
-      <br>и мы покажем вам лучшие предложения гостиниц в седоне
+      Укажите предполагаемые даты поездки<br>и мы покажем вам лучшие предложения гостиниц в седоне
     </p>
-    <a class="button" href="#" title="Поиск гостиницы">
+    <a class="button open-form" href="search-hotels-page.html" title="Поиск гостиницы">
       Поиск гостиницы в Седоне
     </a>
   </div>
 
 
   <!--Form-->
-<div class="modal-content">
+<div class="modal-content hidden">
   <form class="search" action="/echo" method="post">
 
   <!--Дата заезда-->
@@ -177,7 +166,7 @@
         </label>
       </div>
       <div class="form-slot date-choose">
-        <input name="arrival" id="arrival" type="text" value="24 апреля 2014">
+        <input class="input-date" name="arrival" id="arrival" type="text" value="24 апреля 2014">
         <a class="icon-calendar"></a>
       </div>
     </div>
@@ -190,7 +179,7 @@
         </label>
       </div>
       <div class="form-slot date-choose">
-        <input name="departure" id="departure" type="text" value="4 июля 2014">
+        <input class="input-date" name="departure" id="departure" type="text" value="4 июля 2014">
         <a class="icon-calendar"></a>
       </div>
     </div>
@@ -198,23 +187,23 @@
   <!--Количетсво человек-->
     <div class="form-row">
       <div class="form-slot">
-        <label for="adults">
+        <label class="label-adults" for="adults">
           Взрослые:
         </label>
       </div>
       <div class="form-slot number-choose">
         <a class="icon-minus"></a>
-        <input name="adults" id="adults" type="text" value="2">
+        <input class="input-number" name="adults" id="adults" type="text" value="2">
         <a class="icon-plus"></a>
       </div>
       <div class="form-slot">
-        <label class="label-left" for="children">
+        <label class="label-children" for="children">
           Дети:
         </label>
       </div>
       <div class="form-slot number-choose">
         <a class="icon-minus"></a>
-        <input name="children" id="children" type="text" value="0">
+        <input class="input-number" name="children" id="children" type="text" value="0">
         <a class="icon-plus"></a>
       </div>
     </div>
@@ -226,7 +215,7 @@
 <!--Map-->
 
   <div class="map">
-    <!--Тут будет карта...-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838038.6890511978!2d-111.85951145644458!3d34.86656245979871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1435493536392" width="100%" height="589" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 
 </main>
@@ -264,5 +253,6 @@
   </div>
 </div>
 
+<script src="js/script.js"></script>
 </body>
 </html>
