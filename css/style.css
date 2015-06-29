@@ -342,6 +342,8 @@ FEATURES ---------------------------------- toc6
 */
 .features .number {
     display: inline-block;
+    vertical-align: top;
+
 }
 
 .features .number,
@@ -500,6 +502,7 @@ FORM-TITLE -------------------------------- toc7
 .form-title .button {
     width: 568px;
     display: inline-block;
+    vertical-align: top;
     background-color: #766357;
 
     color:  #ffffff;
@@ -530,8 +533,10 @@ FORM -------------------------------------- toc8
 
 ================================================
 */
-.modal-content {
+.modal-content{
     position: relative;
+    animation-name: open;
+    animation-duration: 0.7s;
 }
 
 .search {
@@ -540,7 +545,10 @@ FORM -------------------------------------- toc8
     left: 50%;
     margin-left: -284px;
 
-    padding: 55px;
+    padding-top: 55px;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-bottom: 55px;
 
     width: 568px;
     height: 395px;
@@ -556,15 +564,15 @@ FORM -------------------------------------- toc8
 }
 
 .form-row {
-    min-height: 34px;
+    min-height: 38px;
     margin-bottom: 29px;
-    text-align: left;
 }
 
-.form-slot {
-    width: 24%;
-    vertical-align: middle;
-    display: inline-block;
+.form-slot-label {
+    margin-top: 5px;
+    width: 112px;
+    float: left;
+    text-align: left;
 }
 
 .form-row input {
@@ -573,14 +581,14 @@ FORM -------------------------------------- toc8
     font-weight: bold;
     text-transform: uppercase;
     text-align: left;
+    height: 38px;
 }
 
 .date-choose {
     position: relative;
+    float: right;
 
-    width: 74%;
-    text-align: left;
-    vertical-align: middle;
+    width: 346px;
 }
 
 .date-choose .input-date {
@@ -607,15 +615,19 @@ FORM -------------------------------------- toc8
 }
 
 .number-choose {
-    min-height: 34px;
+    width: 114px;
+    float: left;
     position: relative;
 }
 
+.number-choose:last-child {
+    float: right;
+}
+
 .number-choose .input-number {
-    position: absolute;
     width: 38px;
-    top: 0;
-    right: 33%;
+    margin-right: 38px;
+    margin-left: 38px;
 
     padding-top: 4px;
     padding-bottom: 4px;
@@ -628,10 +640,9 @@ FORM -------------------------------------- toc8
 
     display: block;
     top: 0;
-    margin: 0;
 
     line-height: 38px;
-    width: 37px;
+    width: 38px;
     text-align: center;
 }
 
@@ -644,7 +655,7 @@ FORM -------------------------------------- toc8
 }
 
 .label-children {
-    padding-left: 52px;
+    padding-left: 53px;
 }
 
 /*Стилизация - инпуты*/
@@ -706,7 +717,7 @@ FORM -------------------------------------- toc8
     padding-left: 19px;
     padding-right: 19px;
 
-    margin-top: 28px;
+    margin-top: 24px;
 
     border: none;
     outline: none;
@@ -726,6 +737,15 @@ FORM -------------------------------------- toc8
 /*Для скрипта и анимации*/
 .hidden {
     display: none;
+}
+
+@keyframes open {
+    from {
+        transform: scaleY(0) translateY(-100%);
+    }
+    to {
+        transform: scaleY(1) translateY(0);
+    }
 }
 
 
@@ -771,6 +791,7 @@ FOOTER ----------------------------------- toc10
 */
 .page-footer .hashtag {
     display:inline-block;
+    vertical-align: top;
     margin-top: 45px;
 
     font-weight: bold;
@@ -797,6 +818,8 @@ FOOTER ----------------------------------- toc10
     padding-top: 13px;
 
     display:inline-block;
+    vertical-align: top;
+
     width: 46px;
     height: 48px;
 
@@ -1141,6 +1164,8 @@ RANKING ---------------------------------- toc12
 
 .sort {
     display: inline-block;
+    vertical-align: top;
+
     margin-top: 6px;
 }
 
@@ -1189,6 +1214,8 @@ RANKING ---------------------------------- toc12
 */
 .ranking .arrows {
     display: inline-block;
+    vertical-align: top;
+
     float: right;
     margin-top: 2px;
 }
@@ -1290,6 +1317,8 @@ HOTELS ----------------------------------- toc13
 
 .info.type {
     display: inline-block;
+    vertical-align: top;
+
     min-width: 111px;
 }
 
@@ -1301,6 +1330,7 @@ HOTELS ----------------------------------- toc13
 */
 .hotel-buttons .button {
     display: inline-block;
+    vertical-align: top;
 
     padding-left: 16px;
     padding-right: 16px;
@@ -1351,6 +1381,7 @@ HOTELS ----------------------------------- toc13
 
 .hotel-card .hotel-rating {
     display: inline-block;
+    vertical-align: top;
     text-align: right;
 
     position: absolute;
@@ -1409,6 +1440,7 @@ SEARCH HOTELS PAGE ----------------------- toc14
     width: 568px;
     display: inline-block;
     background-color: #766357;
+    vertical-align: top;
 }
 
 .search-hotels-title {

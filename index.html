@@ -5,7 +5,7 @@
   <title>Седона</title>
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/min.style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -160,12 +160,12 @@
 
   <!--Дата заезда-->
     <div class="form-row">
-      <div class="form-slot">
+      <div class="form-slot-label">
         <label for="arrival">
           Дата заезда:
         </label>
       </div>
-      <div class="form-slot date-choose">
+      <div class="date-choose">
         <input class="input-date" name="arrival" id="arrival" type="text" value="24 апреля 2014">
         <a class="icon-calendar"></a>
       </div>
@@ -173,12 +173,12 @@
 
   <!--Дата выезда-->
     <div class="form-row">
-      <div class="form-slot">
+      <div class="form-slot-label">
         <label for="departure">
           Дата выезда:
         </label>
       </div>
-      <div class="form-slot date-choose">
+      <div class="date-choose">
         <input class="input-date" name="departure" id="departure" type="text" value="4 июля 2014">
         <a class="icon-calendar"></a>
       </div>
@@ -186,22 +186,22 @@
 
   <!--Количетсво человек-->
     <div class="form-row">
-      <div class="form-slot">
+      <div class="form-slot-label">
         <label class="label-adults" for="adults">
           Взрослые:
         </label>
       </div>
-      <div class="form-slot number-choose">
+      <div class="number-choose">
         <a class="icon-minus"></a>
         <input class="input-number" name="adults" id="adults" type="text" value="2">
         <a class="icon-plus"></a>
       </div>
-      <div class="form-slot">
+      <div class="form-slot-label">
         <label class="label-children" for="children">
           Дети:
         </label>
       </div>
-      <div class="form-slot number-choose">
+      <div class="number-choose">
         <a class="icon-minus"></a>
         <input class="input-number" name="children" id="children" type="text" value="0">
         <a class="icon-plus"></a>
@@ -242,7 +242,7 @@
          </div>
         <div class="col-one-third">
           <span class="copyright-by">Website by</span>
-          <a class="copyright" href="#" alt="HTML Acdemy">
+          <a class="copyright" href="#" title="HTML Acdemy">
           </a>
          </div>
       </div>
@@ -253,6 +253,6 @@
   </div>
 </div>
 
-<script src="js/script.js"></script>
+<script src="js/min.script.js"></script>
 </body>
 </html>
