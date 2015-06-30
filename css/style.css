@@ -256,7 +256,7 @@ HEADER ------------------------------------ toc3
 }
 
 .main-navigation .active:active {
-    color: #766357;
+    color: #dbd8d5;
 }
 
 
@@ -979,22 +979,22 @@ FILTERS ---------------------------------- toc11
     margin: 0;
 }
 
-.checkbox:checked + label:before {
+input[type="checkbox"]:checked + label:before {
     content: '\2611';
 }
 
-.checkbox + label,
-.checkbox + label:before {
+input[type="checkbox"] + label,
+input[type="checkbox"] + label:before {
     color: #b5b5b5;
 }
 
-.checkbox + label:hover,
-.checkbox + label:hover:before {
+input[type="checkbox"] + label:hover,
+input[type="checkbox"] + label:hover:before {
     color: #ffffff;
 }
 
-.checkbox:disabled + label,
-.checkbox:disabled + label:before {
+input[type="checkbox"]:disabled + label,
+input[type="checkbox"]:disabled + label:before {
     color: #6a6a6a;
     cursor: default;
 }
@@ -1188,7 +1188,7 @@ RANKING ---------------------------------- toc12
 .button-rank.active:active {
     text-decoration: none;
     color: #81b3d2;
-    border:none;
+    border-bottom:none;
 }
 
 .button-rank {
