@@ -225,36 +225,38 @@ HEADER ------------------------------------ toc3
 }
 
 .main-navigation .logo {
+    padding: 0;
+    margin: 0;
     z-index: 100;
     position: absolute;
     left: 50%;
     margin-left: -69px;
 }
 
-.main-navigation a:not(.logo) {
+.main-navigation a {
     padding-top: 14px;
     margin-bottom: 16px;
 }
 
-.main-navigation a:not(.logo):hover {
+.main-navigation a:hover {
     color: #81b3d2;
 }
 
-.main-navigation a:not(.logo):active {
+.main-navigation a:active {
     color: #cacaca;
 }
 
 /*Стилизация.active для Гостиницы*/
-.main-navigation .active:not(.logo) {
+.main-navigation .active {
     color: #766357;
 }
 
-.main-navigation .active:not(.logo):hover {
+.main-navigation .active:hover {
     color: #604e43;
 }
 
-.main-navigation .active:not(.logo):active {
-    color: #e5e3e1;
+.main-navigation .active:active {
+    color: #766357;
 }
 
 
@@ -307,7 +309,7 @@ INTRO ------------------------------------- toc4
 }
 
 .subtitle h2 {
-    margin-bottom: 28px; /*34px*/
+    margin-bottom: 28px;
 }
 
 
@@ -433,20 +435,20 @@ FEATURES ---------------------------------- toc6
     margin-left: -38px;
 
     background-color: transparent;
-    background-image: url("../img/sprit-feat-icons.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
 }
 
 .feat-img.feat-house:before {
-    background-position: 0 0;
+    background-position: 0 5px;
 }
 
 .feat-img.feat-burger:before {
-    background-position: -95px 0px;
+    background-position: 1px -88px;
 }
 
 .feat-img.feat-souvenir:before {
-    background-position: -191px 0;
+    background-position: 6px -183px;
 }
 
 .features-white .features-title {
@@ -533,12 +535,6 @@ FORM -------------------------------------- toc8
 
 ================================================
 */
-.modal-content{
-    position: relative;
-    animation-name: open;
-    animation-duration: 0.7s;
-}
-
 .search {
     position: absolute;
     top: 0;
@@ -569,7 +565,7 @@ FORM -------------------------------------- toc8
 }
 
 .form-slot-label {
-    margin-top: 5px;
+    margin-top: 5.5px;
     width: 112px;
     float: left;
     text-align: left;
@@ -592,7 +588,7 @@ FORM -------------------------------------- toc8
 }
 
 .date-choose .input-date {
-    width: 88.5%;
+    width: 100%;
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 12px;
@@ -625,9 +621,7 @@ FORM -------------------------------------- toc8
 }
 
 .number-choose .input-number {
-    width: 38px;
-    margin-right: 38px;
-    margin-left: 38px;
+    width: 114px;
 
     padding-top: 4px;
     padding-bottom: 4px;
@@ -682,11 +676,9 @@ FORM -------------------------------------- toc8
 .icon-minus,
 .icon-plus {
     color: #a9a9a9;
-    background-color: #f2f2f2;
 }
 
 .icon-calendar {
-    background-color: #f2f2f2;
     color: #c2c2c2;
 }
 
@@ -735,6 +727,12 @@ FORM -------------------------------------- toc8
 }
 
 /*Для скрипта и анимации*/
+.modal-content{
+    position: relative;
+    animation-name: open;
+    animation-duration: 0.7s;
+}
+
 .hidden {
     display: none;
 }
@@ -871,23 +869,23 @@ FOOTER ----------------------------------- toc10
     content: "";
 
     top: 40px;
-    left: -55px;
+    left: -54px;
 
     width: 112px;
     height: 39px;
 
-    background-image: url("../img/sprite-copyright.png");
+    background-image: url("../img/sprite.png");
+    background-position: 0 -278px;
 }
 
 .copyright:hover:after {
-    background-image: url("../img/sprite-copyright.png");
-    background-position: 0 -48px;
+    background-position: 0 -326px;
 }
 
 .copyright:active:after {
-    background-image: url("../img/sprite-copyright.png");
-    background-position: 0 -95px;
+    background-position: 0 -373px;
 }
+
 
 /*
 ================================================
@@ -917,11 +915,11 @@ FILTERS ---------------------------------- toc11
     color: #ffffff;
 }
 
-.filters fieldset:not(:last-child) {
+.filters .options {
     margin-right: 10.5%;
 }
 
-.filters fieldset:last-child {
+.filters .cost {
     width: 26.3%;
     position: absolute;
     right: 7%;
@@ -929,7 +927,7 @@ FILTERS ---------------------------------- toc11
 }
 
 
-.filters legend{
+.filters legend {
     font-weight: bold;
     font-size: 16px;
     line-height: 21px;
@@ -937,13 +935,13 @@ FILTERS ---------------------------------- toc11
     margin-bottom: 25px;
 }
 
-fieldset:last-child legend{
-    text-align: left;
-    margin-bottom: 10px;
+.cost {
+    text-align: center;
 }
 
-fieldset:last-child{
-    text-align: center;
+.cost legend {
+    text-align: left;
+    margin-bottom: 10px;
 }
 
 .checkbox {
@@ -961,7 +959,7 @@ fieldset:last-child{
     padding-bottom: 25px;
 }
 
-.checkbox input[type="checkbox"] {
+.checkbox input {
     display: none;
     z-index: -1;
 
@@ -981,26 +979,25 @@ fieldset:last-child{
     margin: 0;
 }
 
-input[type="checkbox"]:checked + label:before {
+.checkbox:checked + label:before {
     content: '\2611';
 }
 
-input[type="checkbox"] + label,
-input[type="checkbox"] + label:before {
+.checkbox + label,
+.checkbox + label:before {
     color: #b5b5b5;
 }
 
-input[type="checkbox"] + label:hover,
-input[type="checkbox"] + label:hover:before {
+.checkbox + label:hover,
+.checkbox + label:hover:before {
     color: #ffffff;
 }
 
-input[type="checkbox"]:disabled + label,
-input[type="checkbox"]:disabled + label:before {
+.checkbox:disabled + label,
+.checkbox:disabled + label:before {
     color: #6a6a6a;
     cursor: default;
 }
-
 
 /*
     =============================
@@ -1100,7 +1097,6 @@ input[type="checkbox"]:disabled + label:before {
 }
 
 .range-button {
-    font-family: 'PT Sans',Arial,sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff;
@@ -1129,6 +1125,7 @@ input[type="checkbox"]:disabled + label:before {
     color: #b5b5b5;
     background-color: #ffffff;
 }
+
 
 /*
 ================================================
@@ -1191,21 +1188,20 @@ RANKING ---------------------------------- toc12
     color: #81b3d2;
 }
 
-.button-rank:not(.active) {
+.button-rank {
     border-bottom: 1px dotted #81b3d2;
     text-decoration: none;
     color: #cccccc;
 }
 
-.button-rank:not(.active):hover {
+.button-rank:hover {
     color: #81b3d2;
 }
 
-.button-rank:not(.active):active {
+.button-rank:active {
     border-bottom: none;
     color: #000000;
 }
-
 
 /*
     =============================
@@ -1234,11 +1230,11 @@ RANKING ---------------------------------- toc12
     color: #81b3d2;
 }
 
-.button-arrow:hover:not(.active) {
+.button-arrow:hover {
     color: #000000;
 }
 
-.button-arrow:active:not(.active) {
+.button-arrow:active {
     color: #81b3d2;
 }
 
@@ -1263,7 +1259,6 @@ HOTELS ----------------------------------- toc13
     padding-right: 6%;
 }
 
-
 /*
     =============================
     HOTEL PHOTO -----------------
@@ -1278,7 +1273,6 @@ HOTELS ----------------------------------- toc13
 
     margin-right: 26px;
 }
-
 
 /*
     =============================
@@ -1378,7 +1372,6 @@ HOTELS ----------------------------------- toc13
     HOTEL RATING ----------------
     =============================
 */
-
 .hotel-card .hotel-rating {
     display: inline-block;
     vertical-align: top;
@@ -1433,6 +1426,10 @@ SEARCH HOTELS PAGE ----------------------- toc14
     background-position: center center;
     background-size: cover;
 
+}
+
+.optional-box {
+    position: relative;
 }
 
 .brown-title {

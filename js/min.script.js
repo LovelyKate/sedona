@@ -1,1 +1,0 @@
-var link=document.querySelector(".open-form"),open=document.querySelector(".modal-content"),close=document.querySelector(".modal-content");link.addEventListener("click",function(e){open.classList.contains("hidden")?(e.preventDefault(),open.classList.remove("hidden")):(e.preventDefault(),open.classList.add("hidden"))});

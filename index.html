@@ -2,64 +2,64 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Седона</title>
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  <title>Седона / Главная</title>
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/min.style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
 
 <div class="page-wrapper">
   <div class="container">
 
-  <!--Header-->
-  <header class="page-header">
-    <div class="container">
-      <nav class="main-navigation">
-        <ul>
-          <li>
-            <a href="#">
-              Информация
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Фото и видео
-            </a>
-          </li>
-          <li>
-            <a href="#" class="logo">
-              <img src="img/logo.png" height="70" width="138" alt="Главная страница">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Карта штата
-            </a>
-          </li>
-          <li>
-            <a href="hotels.html">
-              Гостиницы
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!--Header-->
+    <header class="page-header">
+      <div class="container">
+        <nav class="main-navigation">
+          <ul>
+            <li>
+              <a href="#">
+                Информация
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Фото и видео
+              </a>
+            </li>
+            <li>
+              <a href="#" class="logo">
+                <img src="img/logo.png" height="70" width="138" alt="Главная страница">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Карта штата
+              </a>
+            </li>
+            <li>
+              <a href="hotels.html">
+                Гостиницы
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <!--Main-->
-  <main>
+    <!--Main-->
+    <main>
 
-  <!--Intro-->
-    <div class="intro">
-      <img src="img/tagline.png" height="352" width="458" alt="Tagline">
-    </div>
-    <div class="subtitle">
-      <h2>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
-      <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
-    </div>
+      <!--Intro-->
+      <div class="intro">
+        <img src="img/tagline.png" height="352" width="458" alt="Tagline">
+      </div>
+      <div class="subtitle">
+        <h2>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
+        <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+      </div>
 
-    <!--Features-->
+      <!--Features-->
       <div class="row">
         <div class="col-one-third">
           <div class="features features-blue">
@@ -78,8 +78,8 @@
       <div class="row">
         <div class="col-one-third">
           <div class="features features-white">
-          <div class="feat-img feat-house">
-          </div>
+            <div class="feat-img feat-house">
+            </div>
             <h2 class="features-title">Жилье</h2>
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
           </div>
@@ -119,7 +119,7 @@
 
       <div class="row">
         <div class="col-one-third">
-        <div class="features features-grey">
+          <div class="features features-grey">
             <h2 class="features-title">Небольшая<br>площадь</h2>
             <span class="number">— №3 —</span>
             <p>Все достопримеча-<br>тельности находятся очень близко
@@ -142,117 +142,113 @@
         </div>
       </div>
 
-  <!--Form-title-->
-  <div class="form-title">
-    <h1>Заинтересовались?</h1>
-    <p>
-      Укажите предполагаемые даты поездки<br>и мы покажем вам лучшие предложения гостиниц в седоне
-    </p>
-    <a class="button open-form" href="search-hotels-page.html" title="Поиск гостиницы">
-      Поиск гостиницы в Седоне
-    </a>
-  </div>
-
-
-  <!--Form-->
-<div class="modal-content hidden">
-  <form class="search" action="/echo" method="post">
-
-  <!--Дата заезда-->
-    <div class="form-row">
-      <div class="form-slot-label">
-        <label for="arrival">
-          Дата заезда:
-        </label>
+      <!--Form-title-->
+      <div class="form-title">
+        <h1>Заинтересовались?</h1>
+        <p>Укажите предполагаемые даты поездки<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <a class="button open-form" href="search-hotels-page.html" title="Поиск гостиницы">
+          Поиск гостиницы в Седоне
+        </a>
       </div>
-      <div class="date-choose">
-        <input class="input-date" name="arrival" id="arrival" type="text" value="24 апреля 2014">
-        <a class="icon-calendar"></a>
-      </div>
-    </div>
 
-  <!--Дата выезда-->
-    <div class="form-row">
-      <div class="form-slot-label">
-        <label for="departure">
-          Дата выезда:
-        </label>
-      </div>
-      <div class="date-choose">
-        <input class="input-date" name="departure" id="departure" type="text" value="4 июля 2014">
-        <a class="icon-calendar"></a>
-      </div>
-    </div>
 
-  <!--Количетсво человек-->
-    <div class="form-row">
-      <div class="form-slot-label">
-        <label class="label-adults" for="adults">
-          Взрослые:
-        </label>
+      <!--Form-->
+      <div class="modal-content hidden">
+        <form class="search" action="/echo" method="post">
+
+          <!--Дата заезда-->
+          <div class="form-row">
+            <div class="form-slot-label">
+              <label for="arrival">
+                Дата заезда:
+              </label>
+            </div>
+            <div class="date-choose">
+              <input class="input-date" name="arrival" id="arrival" type="text" value="24 апреля 2014">
+              <a class="icon-calendar"></a>
+            </div>
+          </div>
+
+          <!--Дата выезда-->
+          <div class="form-row">
+            <div class="form-slot-label">
+              <label for="departure">
+                Дата выезда:
+              </label>
+            </div>
+            <div class="date-choose">
+              <input class="input-date" name="departure" id="departure" type="text" value="4 июля 2014">
+              <a class="icon-calendar"></a>
+            </div>
+          </div>
+
+          <!--Количетсво человек-->
+          <div class="form-row">
+            <div class="form-slot-label">
+              <label class="label-adults" for="adults">
+                Взрослые:
+              </label>
+            </div>
+            <div class="number-choose">
+              <a class="icon-minus"></a>
+              <input class="input-number" name="adults" id="adults" type="text" value="2">
+              <a class="icon-plus"></a>
+            </div>
+            <div class="form-slot-label">
+              <label class="label-children" for="children">
+                Дети:
+              </label>
+            </div>
+            <div class="number-choose">
+              <a class="icon-minus"></a>
+              <input class="input-number" name="children" id="children" type="text" value="0">
+              <a class="icon-plus"></a>
+            </div>
+          </div>
+
+          <button class="button" type="submit">Найти</button>
+        </form>
       </div>
-      <div class="number-choose">
-        <a class="icon-minus"></a>
-        <input class="input-number" name="adults" id="adults" type="text" value="2">
-        <a class="icon-plus"></a>
+
+      <!--Map-->
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838038.6890511978!2d-111.85951145644458!3d34.86656245979871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1435493536392" width="100%" height="589" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
-      <div class="form-slot-label">
-        <label class="label-children" for="children">
-          Дети:
-        </label>
-      </div>
-      <div class="number-choose">
-        <a class="icon-minus"></a>
-        <input class="input-number" name="children" id="children" type="text" value="0">
-        <a class="icon-plus"></a>
-      </div>
-    </div>
 
-    <button class="button" type="submit">Найти</button>
-  </form>
-</div>
+    </main>
 
-<!--Map-->
-
-  <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838038.6890511978!2d-111.85951145644458!3d34.86656245979871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1435493536392" width="100%" height="589" frameborder="0" style="border:0" allowfullscreen></iframe>
-  </div>
-
-</main>
-
-<!--Footer-->
-  <footer class="page-footer main-page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-one-third">
-          <a class="hashtag" href="#" title="Visit Sedona">
-            #visitsedona
-          </a>
+    <!--Footer-->
+    <footer class="page-footer main-page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-one-third">
+            <a class="hashtag" href="#" title="Visit Sedona">
+              #visitsedona
+            </a>
+          </div>
+          <div class="col-one-third">
+            <a class="social-button social-button-tw" href="#" title="Twitter">
+              <i class="icon-twitter"></i>
+            </a>
+            <a class="social-button social-button-fb" href="#" title="Facebook">
+              <i class="icon-facebook"></i>
+            </a>
+            <a class="social-button social-button-ut" href="#" title="Youtube">
+              <i class="icon-youtube"></i>
+            </a>
+          </div>
+          <div class="col-one-third">
+            <span class="copyright-by">Website by</span>
+            <a class="copyright" href="#" title="HTML Acdemy">
+            </a>
+          </div>
         </div>
-        <div class="col-one-third">
-          <a class="social-button social-button-tw" href="#" title="Twitter">
-            <i class="icon-twitter"></i>
-          </a>
-          <a class="social-button social-button-fb" href="#" title="Facebook">
-            <i class="icon-facebook"></i>
-          </a>
-         <a class="social-button social-button-ut" href="#" title="Youtube">
-            <i class="icon-youtube"></i>
-          </a>
-         </div>
-        <div class="col-one-third">
-          <span class="copyright-by">Website by</span>
-          <a class="copyright" href="#" title="HTML Acdemy">
-          </a>
-         </div>
       </div>
-    </div>
-  </footer>
-
+    </footer>
 
   </div>
 </div>
 
-<script src="js/min.script.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>
