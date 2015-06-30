@@ -1183,9 +1183,12 @@ RANKING ---------------------------------- toc12
     margin-right: 29px;
 }
 
-.button-rank.active {
+.button-rank.active,
+.button-rank.active:hover,
+.button-rank.active:active {
     text-decoration: none;
     color: #81b3d2;
+    border:none;
 }
 
 .button-rank {
@@ -1226,7 +1229,9 @@ RANKING ---------------------------------- toc12
     line-height: 20px;
 }
 
-.button-arrow.active {
+.button-arrow.active,
+.button-arrow.active:hover,
+.button-arrow.active:active {
     color: #81b3d2;
 }
 
