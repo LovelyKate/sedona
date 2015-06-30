@@ -600,6 +600,7 @@ FORM -------------------------------------- toc8
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 12px;
+    padding-right: 38px;
 }
 
 .date-choose a {
@@ -633,6 +634,8 @@ FORM -------------------------------------- toc8
 
     padding-top: 4px;
     padding-bottom: 4px;
+    padding-right: 38px;
+    padding-left: 38px;
     text-align: center;
 }
 
@@ -1287,9 +1290,9 @@ HOTELS ----------------------------------- toc13
 
     border-bottom: 1px solid #e5e5e5;
 
-    min-height:150px;
+    min-height: 150px;
 
-    padding-top: 30px;
+    padding-top: 26px;
     padding-bottom: 30px;
     padding-left: 6%;
     padding-right: 6%;
@@ -1301,11 +1304,12 @@ HOTELS ----------------------------------- toc13
     =============================
 */
 .hotel-card .hotel-photo {
-    display: inline-block;
-    vertical-align: top;
-
+    position: absolute;
     width: 135px;
     height: 90px;
+    top: 30px;
+    bottom: 0;
+    overflow: hidden;
 }
 
 /*
@@ -1316,14 +1320,13 @@ HOTELS ----------------------------------- toc13
 .hotel-card .hotel-main {
     display: inline-block;
     vertical-align: top;
-    padding-left: 26px;
-    padding-right: 26px;
+    padding-left: 165px;
+    padding-right: 115px;
 }
 
 .hotel-main .hotel-name {
     display: inline-block;
     vertical-align: top;
-    margin-top:-5px;
 }
 
 .hotel-name a {
