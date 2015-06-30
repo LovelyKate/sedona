@@ -432,7 +432,7 @@ FEATURES ---------------------------------- toc6
 
     height: 76px;
     width: 76px;
-    margin-left: -38px;
+    left: 102px;
 
     background-color: transparent;
     background-image: url("../img/sprite.png");
@@ -729,20 +729,35 @@ FORM -------------------------------------- toc8
 /*Для скрипта и анимации*/
 .modal-content{
     position: relative;
-    animation-name: open;
-    animation-duration: 0.7s;
+    -webkit-animation-name: open;
+            animation-name: open;
+    -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
 }
 
 .hidden {
     display: none;
 }
 
-@keyframes open {
+@-webkit-keyframes open {
     from {
-        transform: scaleY(0) translateY(-100%);
+        -webkit-transform: scaleY(0) translateY(-100%);
+                transform: scaleY(0) translateY(-100%);
     }
     to {
-        transform: scaleY(1) translateY(0);
+        -webkit-transform: scaleY(1) translateY(0);
+                transform: scaleY(1) translateY(0);
+    }
+}
+
+@keyframes open {
+    from {
+        -webkit-transform: scaleY(0) translateY(-100%);
+                transform: scaleY(0) translateY(-100%);
+    }
+    to {
+        -webkit-transform: scaleY(1) translateY(0);
+                transform: scaleY(1) translateY(0);
     }
 }
 
@@ -923,6 +938,7 @@ FILTERS ---------------------------------- toc11
     width: 26.3%;
     position: absolute;
     right: 7%;
+    top:27px;
     min-width: 224px;
 }
 
@@ -1214,8 +1230,9 @@ RANKING ---------------------------------- toc12
 .ranking .arrows {
     display: inline-block;
     vertical-align: top;
-
-    float: right;
+    position: absolute;
+    top: 30px;
+    right: 6.1%;
     margin-top: 2px;
 }
 
@@ -1289,16 +1306,22 @@ HOTELS ----------------------------------- toc13
     vertical-align: top;
 }
 
-.hotel-main h2 {
-    cursor: pointer;
-    margin-top: -4px;
+.hotel-main .hotel-name {
+    display: inline-block;
+    vertical-align: top;
+    margin-top:-5px;
+    text-decoration: none;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #000000;
 }
 
-.hotel-main h2:hover {
+.hotel-main .hotel-name:hover {
     color: #81b3d2;
 }
 
-.hotel-main h2:active {
+.hotel-main .hotel-name:active {
     color: #cacaca;
 }
 
