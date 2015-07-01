@@ -3,12 +3,12 @@ var action = document.querySelector(".modal-content");
 
 link.addEventListener("click", function(event) {
 
-if (action.classList.contains("hidden")) {
   event.preventDefault();
+
+if (action.classList.contains("hidden")) {
   action.classList.remove("hidden");
 }
 else {
-  event.preventDefault();
   action.classList.add("hidden");
 }
 

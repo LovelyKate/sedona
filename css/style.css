@@ -382,6 +382,7 @@ FEATURES ---------------------------------- toc6
     bottom: -50%;
     top: -50%;
     margin: auto;
+    background-color: #dbd7d3;
 }
 
 /*
@@ -437,7 +438,10 @@ FEATURES ---------------------------------- toc6
 
     height: 76px;
     width: 76px;
-    left: 102px;
+
+    left: -38px;
+    margin-left: 50%;
+    margin-right: 50%;
 
     background-color: transparent;
     background-image: url("../img/sprite.png");
@@ -737,49 +741,23 @@ FORM -------------------------------------- toc8
     color: #94b9d2;
 }
 
-/*Для скрипта и анимации*/
+/*Для анимации*/
 .modal-content {
     position: relative;
 
-    transform: scale(1) translate(0);
-    transition: translate 2s;
+    -webkit-transform: scale(1) translate(0);
+        -ms-transform: scale(1) translate(0);
+            transform: scale(1) translate(0);
+
+    -webkit-transition: -webkit-transform 0.7s;
+            transition: transform 0.7s;
 }
 
 .modal-content.hidden {
-    transform: scale(0) translate(-100%);
+    -webkit-transform: scale(0) translate(0);
+        -ms-transform: scale(0) translate(0);
+            transform: scale(0) translate(0);
 }
-
-/*    -webkit-animation-name: open;
-            animation-name: open;
-    -webkit-animation-duration: 0.7s;
-            animation-duration: 0.7s;*/
-
-.hidden {
-    display: none;
-}
-
-
-/*@-webkit-keyframes open {
-    from {
-        -webkit-transform: scaleY(0) translateY(-100%);
-                transform: scaleY(0) translateY(-100%);
-    }
-    to {
-        -webkit-transform: scaleY(1) translateY(0);
-                transform: scaleY(1) translateY(0);
-    }
-}
-
-@keyframes open {
-    from {
-        -webkit-transform: scaleY(0) translateY(-100%);
-                transform: scaleY(0) translateY(-100%);
-    }
-    to {
-        -webkit-transform: scaleY(1) translateY(0);
-                transform: scaleY(1) translateY(0);
-    }
-}*/
 
 
 /*
@@ -916,6 +894,7 @@ FOOTER ----------------------------------- toc10
 
     background-image: url("../img/sprite.png");
     background-position: 0 -278px;
+    background-color: transparent;
 }
 
 .copyright:hover:after {
@@ -1319,7 +1298,9 @@ HOTELS ----------------------------------- toc13
     top: 30px;
     bottom: 0;
     overflow: hidden;
+    background-color: #f2f2f2;
 }
+
 
 /*
     =============================
@@ -1435,7 +1416,7 @@ HOTELS ----------------------------------- toc13
     text-align: right;
 
     position: absolute;
-    top: 30px;
+    top: 27px;
     right: 0;
     padding-right: 5px;
     min-width: 150px;
@@ -1443,7 +1424,6 @@ HOTELS ----------------------------------- toc13
 }
 
 .hotel-rating .stars {
-    margin-top: -3px;
     color: #81b3d2;
     font-size: 19px;
     line-height: 20px;
