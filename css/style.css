@@ -894,6 +894,7 @@ FOOTER ----------------------------------- toc10
 
     background-image: url("../img/sprite.png");
     background-position: 0 -278px;
+/*Т.к. футер полупрозрачный, то немного непонятна необходимость задавать фоновой цвет для спрайта*/
     background-color: transparent;
 }
 
